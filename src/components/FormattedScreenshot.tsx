@@ -1,5 +1,5 @@
-export default function FormattedScreenshot({src: string}: {src: string}) {
+export default function FormattedScreenshot({src, alt}: {src: string, alt: string}) {
     return (
-        <img src={string} alt="screenshot" className="w-full h-full"/>
+        <img src={src} alt={alt} className="w-full h-full"/>
     )
 }

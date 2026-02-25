@@ -8,17 +8,18 @@ import ProjectLinks from "@/src/components/ProjectLinks";
 
 interface ProjectListProps {
     description: ReactNode;
-    expectations: ReactNode[];
+    dates: ReactNode;
+    expectations: ReactNode;
     bonus: ReactNode;
     difficulties: string[][];
-    screenshots: string[];
+    screenshots: string[][];
     links: string[][];
 }
 
-export default function ProjectList({description, expectations, bonus, difficulties, screenshots, links}: ProjectListProps) {
+export default function ProjectList({description, dates, expectations, bonus, difficulties, screenshots, links}: ProjectListProps) {
     return (
         <div>
-            <ProjectDescription {...{content: description}}/>
+            <ProjectDescription {...{description, dates}}/>
             <ProjectExpectations {...{expectations}}/>
             <ProjectBonus {...{bonus}}/>
             <ProjectDifficulties {...{difficulties}}/>

@@ -3,7 +3,7 @@ import IllustratedItem, {IllustratedItemProps} from "@/src/components/Illustrate
 export default function IllustratedList({items}: {items: IllustratedItemProps[]}) {
     return(
         <ul>
-            <li>
+            <li className="flex flex-col gap-4 divide-y divide-slate-800">
                 { items.map((item, index) => (
                     <IllustratedItem key={index} {...item}/>
                 ))}

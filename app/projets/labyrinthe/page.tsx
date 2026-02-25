@@ -1,5 +1,6 @@
-import ProjectList from "@/src/components/ProjectList";
+import ProjectList from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
+import ProjectBar from "@/src/components/Project/ProjectBar";
 
 export default function Bac() {
     const description = (
@@ -45,13 +46,15 @@ export default function Bac() {
                         title: "Mode Libre",
                         content: "Choix des différents paramètres du labyrinthe (taille, pourcentage de mure, type, vue, etc.)",
                         image: "/maze/freeMode.png",
-                        alt: "Capture d'écran de la fenêtre de configuration du mode libre"
+                        alt: "Capture d'écran de la fenêtre de configuration du mode libre",
+                        id:"free-1"
                     },
                     {
                         title: "Mode Progression",
                         content: "étapes préfaites et imposées. Une étape est un niveau, dont la difficulté peut impacter différents facteur (pourcentage de murs, paramètres propres à la vue, etc.)",
                         image: "/maze/steps.png",
-                        alt: "Capture d'écran de la fenêtre de selection de la difficulté de l'étape"
+                        alt: "Capture d'écran de la fenêtre de selection de la difficulté de l'étape",
+                        id: "prog-1"
                     }
                 ]}/>
             </li>
@@ -64,25 +67,29 @@ export default function Bac() {
                         title: "Vue Totale",
                         content: "le labyrinthe ainsi que tous les éléments (joueur, sortie) sont entièrement visibles.",
                         image: "/maze/total.png",
-                        alt: "Capture d'écran du labyrinthe en vue totale"
+                        alt: "Capture d'écran du labyrinthe en vue totale",
+                        id: "total-1"
                     },
                     {
                         title: "Vue Locale",
                         content: "le joueur est affiché sur une vue annexe où le champ de vision est réduit à une case. Le reste des éléments du labyrinthes sont affichés normalement",
                         image: "/maze/local.png",
-                        alt: "Capture d'écran du labyrinthe en vue locale"
+                        alt: "Capture d'écran du labyrinthe en vue locale",
+                        id: "locale-1"
                     },
                     {
                         title: "Vue Limitée",
                         content: "le joueur ne voit que les cases se trouvant à une certaine distance de lui. Il ne peut pas voir à travers les murs. La distance d'affichage est configurable",
                         image: "/maze/limited.png",
-                        alt: "Capture d'écran du labyrinthe en vue limitée"
+                        alt: "Capture d'écran du labyrinthe en vue limitée",
+                        id: "limitee-1"
                     },
                     {
                         title: "Vue Mappée",
                         content: "L'affichage principal révèle petit à petit les éléments qui ont été vus dans une vue locale centrée sur le joueur. La taille de cette vue locale est configurable.",
                         image: "/maze/mapped.png",
-                        alt: "Capture d'écran du labyrinthe en vue mappée"
+                        alt: "Capture d'écran du labyrinthe en vue mappée",
+                        id: "mapped-1"
                     }
                 ]}/>
             </li>
@@ -94,37 +101,43 @@ export default function Bac() {
                         title: "Etape 1",
                         content: "un labyrinthe aléatoire non carré de petite dimension.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la première étape"
+                        alt: "illustration de la première étape",
+                        id: "e1-1"
                     },
                     {
                         title: "Etape 2",
                         content: "un labyrinthe aléatoire de taille plus grande.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la deuxième étape"
+                        alt: "illustration de la deuxième étape",
+                        id: "e2-1"
                     },
                     {
                         title: "Etape 3",
                         content: "un labyrinthe aléatoire avec une vue locale.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la troisième étape"
+                        alt: "illustration de la troisième étape",
+                        id: "e3-1"
                     },
                     {
                         title: "Etape 4",
                         content: "un labyrinthe parfait de très petite taille.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la quatrième étape"
+                        alt: "illustration de la quatrième étape",
+                        id: "e4-1"
                     },
                     {
                         title: "Etape 5",
                         content: "un labyrinthe aléatoire en vue limitée.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la cinquième étape"
+                        alt: "illustration de la cinquième étape",
+                        id: "e5-1"
                     },
                     {
                         title: "Etape 6",
                         content: "un labyrinthe aléatoire en vue mappée.",
                         image: "/maze/steps/1.png",
-                        alt: "illustration de la sixième étape"
+                        alt: "illustration de la sixième étape",
+                        id: "e6-1"
                     }
                 ]}/>
             </li>
@@ -140,7 +153,7 @@ export default function Bac() {
     );
 
     const bonus =
-        <ul>
+        <ul className="list-disc ml-10 flex flex-col gap-4">
             <li>
                 Effets sonores et de musiques dans l'application.
             </li>
@@ -194,31 +207,39 @@ export default function Bac() {
         ]
     ];
     const screenshots = [
-        ["/maze/title.png", "Ecran titre"],
-        ["/maze/freeMode.png", "Mode Libre"],
-        ["/maze/login.png", "Ecran de connexion"],
-        ["/maze/mainMenu.png", "Menu principal"],
-        ["/maze/maze.png", "Labyrinthe"],
-        ["/maze/profile.png", "Profil"],
-        ["/maze/steps.png", "Etapes"]
+        ["/maze/title.png", "Ecran titre", "title-1"],
+        ["/maze/freeMode.png", "Mode Libre", "free-2"],
+        ["/maze/login.png", "Ecran de connexion", "login-1"],
+        ["/maze/mainMenu.png", "Menu principal", "mainMenu-1"],
+        ["/maze/maze.png", "Labyrinthe", "maze-1"],
+        ["/maze/profile.png", "Profil", "profile-1"],
+        ["/maze/steps.png", "Etapes", "steps-1"],
     ];
     const links = [
         ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", "/gitlab.svg"]
     ];
 
+    const projectData = {
+        description: description,
+        dates: dates,
+        expectations: expectations,
+        bonus: bonus,
+        difficulties: difficulties,
+        screenshots: screenshots,
+        links: links,
+    }
+
     return (
         <div className="flex flex-col flex-1 w-full items-center mb-15">
             <h1 className="text-white text-5xl font-bold font-serif p-8" >Labyrinthe</h1>
             <h2 className="text-white text-3xl font-bold p-8">Projet de Développement Java / JavaFX</h2>
-            <ProjectList
-                description={description}
-                dates={dates}
-                expectations={expectations}
-                bonus={bonus}
-                difficulties={difficulties}
-                screenshots={screenshots}
-                links={links}
-            />
+
+            <div className="flex flex-1 w-full items-start">
+                <ProjectBar/>
+                    <div className="flex flex-col flex-1 w-3/4 pl-8">
+                        <ProjectList {...projectData} />
+                    </div>
+                </div>
         </div>
     );
 }

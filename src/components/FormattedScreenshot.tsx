@@ -1,5 +1,7 @@
-export default function FormattedScreenshot({src, alt}: {src: string, alt: string}) {
+import GrowableImage from "@/src/components/GrowableImage";
+
+export default function FormattedScreenshot({src, alt, id}: {src: string, alt: string, id: string}) {
     return (
-        <img src={src} alt={alt} className="w-full h-full"/>
+        <GrowableImage src={src} layoutId={id} alt={alt}/>
     )
 }

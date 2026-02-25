@@ -1,10 +1,10 @@
-import ProjectDescription from "@/src/components/ProjectDescription";
-import ProjectExpectations from "@/src/components/ProjectExpectations";
-import ProjectBonus from "@/src/components/ProjectBonus";
+import ProjectDescription from "@/src/components/Project/ProjectDescription";
+import ProjectExpectations from "@/src/components/Project/ProjectExpectations";
+import ProjectBonus from "@/src/components/Project/ProjectBonus";
 import {ReactNode} from "react";
-import ProjectDifficulties from "@/src/components/ProjectDifficulties";
-import ProjectScreenshots from "@/src/components/ProjectScreenshots";
-import ProjectLinks from "@/src/components/ProjectLinks";
+import ProjectDifficulties from "@/src/components/Project/ProjectDifficulties";
+import ProjectScreenshots from "@/src/components/Project/ProjectScreenshots";
+import ProjectLinks from "@/src/components/Project/ProjectLinks";
 
 interface ProjectListProps {
     description: ReactNode;
@@ -18,7 +18,7 @@ interface ProjectListProps {
 
 export default function ProjectList({description, dates, expectations, bonus, difficulties, screenshots, links}: ProjectListProps) {
     return (
-        <div>
+        <div className="flex flex-col gap-4">
             <ProjectDescription {...{description, dates}}/>
             <ProjectExpectations {...{expectations}}/>
             <ProjectBonus {...{bonus}}/>

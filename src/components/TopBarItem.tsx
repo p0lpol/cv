@@ -1,31 +1,16 @@
-import {ReactNode} from "react";
-
 interface TopBarItemProps {
     title: string;
+    link: string;
 }
 
-function Button(props: { className: string, children: ReactNode }) {
-    return null;
-}
-
-export default function TopBarItem({ title }: TopBarItemProps) {
+export default function TopBarItem({ title , link="/"}: TopBarItemProps) {
     return (
-        <Button className="
-            relative px-5 py-2 text-white font-bold cursor-pointer
-            transition-all duration-75 select-none outline-none rounded-xl
-
-            -translate-y-1
-            bg-linear-160 from-slate-900 to-slate-800
-
-            hover:from-slate-700 hover:to-zinc-700
-
-            active:translate-y-0
-            active:scale-[0.97]
-        "
+        <a className="flex p-2 text-sm font-medium text-white
+        transition-colors duration-200 hover:text-emerald-500 rounded-lg
+        bg-slate-800 justify-center items-center hover:bg-slate-700 active:opacity-50"
+           href={link}
         >
-            <div className="absolute inset-x-0 top-0 h-px  rounded-xl bg-white/20 " />
-
             <span className="relative z-10">{title}</span>
-        </Button>
+        </a>
     );
 }

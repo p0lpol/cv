@@ -47,7 +47,7 @@ export default function ProfileCard ({ name, image }: ProfileCardProps){
 
     return (
         <div className="
-        flex flex-col items-center justify-evenly w-[90vw] max-w-125 min-h-[60vh] rounded-3xl border-2
+        flex flex-col items-center justify-evenly w-[90vw] max-w-125 min-h-150 rounded-3xl border-2
         border-gray-900 px-8 shadow-[8px_8px_6px_0px_rgba(0,0,0,0.1)] bg-slate-900 text-white shadow-slate-800"
              onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}
              style={{

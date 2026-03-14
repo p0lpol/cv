@@ -3,7 +3,7 @@ import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
 
 export default function Bac() {
-    const [value, copy] = useCopyToClipboard()
+    const [_value, copy] = useCopyToClipboard()
 
     return (
         <div className="flex flex-col flex-1 w-full items-center mb-15">
@@ -38,7 +38,7 @@ export default function Bac() {
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button
-                                onClick={() => copy("Lycée Jean Joly - Lycée de la Rivière 2 Chem. la Ouette, Saint-Louis 97421 La Réunion")}
+                                onClick={() => copy("Tereos Saint-Louis Rond point du Gol, Saint-Louis 97450, La Réunion")}
                                 className="text-start text-emerald-500 hover:text-emerald-600 w-fit">
                                 Tereos Saint-Louis<br/>
                                 Rond point du Gol, Saint-Louis 97450<br/>

@@ -9,7 +9,7 @@ export default function Page() {
                         name: "Stage Ouvrier - Tereos",
                         image: "/tereos.svg",
                         description: "",
-                        link: "/experience/1"
+                        link: "/experience/tereos"
                     }
                 ]}/>
         </div>

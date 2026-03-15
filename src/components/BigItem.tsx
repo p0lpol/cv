@@ -16,9 +16,10 @@ export interface BigItemsProps {
     rounded?: boolean;
     size?: number;
     bg?: boolean;
+    imgSize?: number;
 }
 
-export default function BigItem({name, image, description, link, rounded=true, size, bg}: BigItemsProps) {
+export default function BigItem({name, image, description, link, rounded=true, size, bg, imgSize=2}: BigItemsProps) {
     const heightClass = size ? sizeMap[size] || "h-60" : "h-60";
 
     return(
@@ -31,7 +32,7 @@ export default function BigItem({name, image, description, link, rounded=true, s
                     {description}
                 </div>
             </div>
-            <img src={image} alt={name} width={200} height={200} className={`${rounded ? 'rounded-full' : 'rounded-xl'} ${bg ? 'bg-white' : ""}`}/>
+            <img src={image} alt={name} width={imgSize * 100} height={200} className={`${rounded ? 'rounded-full' : 'rounded-xl'} ${bg ? 'bg-white' : ""}`}/>
         </Link>
     )
 }

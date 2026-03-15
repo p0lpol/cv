@@ -216,7 +216,7 @@ export default function Bac() {
         ["/maze/steps.png", "Etapes", "steps-1"],
     ];
     const links = [
-        ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", "/gitlab.svg"]
+        ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", "/logo/gitlab.svg"]
     ];
 
     const projectData = {

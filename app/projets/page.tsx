@@ -36,7 +36,7 @@ export default function Page() {
                         <p>
                             Calculatrice avec opérations de bases + quelques fonctions en <strong className="text-emerald-500">Java</strong> + <strong className="text-emerald-500">JavaFx</strong>
                         </p>,
-                    link: "/projets/super_calculator",
+                    link: "/projets/super-calculator",
                     rounded: false
                 },
                 {
@@ -46,7 +46,7 @@ export default function Page() {
                         <p>
                             Jeu de construction de ville en suivant une philosophie <strong className="text-emerald-500">Agile</strong> en <strong className="text-emerald-500">Java</strong> (interface graphique dans le terminal)
                         </p>,
-                    link: "/projets/medieval_horizon"
+                    link: "/projets/medieval-horizon"
                 }
             ]}/>
         </div>

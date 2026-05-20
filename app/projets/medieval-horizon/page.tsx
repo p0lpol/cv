@@ -5,6 +5,13 @@ import ProjectBar from "@/src/components/Project/ProjectBar";
 export default function medievalHorizonPage() {
     const description = (
         <p>
+            <strong>Medieval Horizon</strong> est un jeu de gestion de ville et de ressources au tour par tour, développé en <strong>Java</strong>.
+            Dépourvu d'interface graphique classique, l'expérience se déroule entièrement au sein du terminal grâce à l'utilisation d'affichages textuels, d'ASCII art et d'émoticônes.
+            À chaque tour, le joueur doit faire des choix stratégiques pour gérer son économie, en dépensant son or et ses ressources dans la construction de divers bâtiments productifs.
+            L'objectif principal est de trouver le point d'équilibre parfait pour faire prospérer sa population tout en survivant à des événements aléatoires imprévisibles.
+            <br/><br/>
+            Au-delà du défi de programmation, ce projet est avant tout <strong>une mise en pratique de la gestion de projet Agile</strong>.
+            Développé par une équipe de six personnes, la création de ce jeu a servi de support pour expérimenter et appliquer rigoureusement le framework Scrum sur un cycle de développement court et intense.
         </p>
     );
 
@@ -24,11 +31,11 @@ export default function medievalHorizonPage() {
             sont imposées.</h2>
             <p>
                 Le jeu ne possède pas d'interface dédié, nous utilisons le terminal pour afficher
-                les différents éléments du jeu à l'aide de différentes techniques : ascii art, émoticones, texte.
-                A chaque tour, un joueur peut choisir de dépenser de l'argent et des ressources pour construire un batîment
+                les différents éléments du jeu à l'aide de différentes techniques : ascii art, émoticônes, texte.
+                A chaque tour, un joueur peut choisir de dépenser de l'argent et des ressources pour construire un batiment
                 qui génèrera lui-même des ressources. Le but est donc de trouver un équilibre qui permette à la population de
                 prospérer tout en subissant des événements aléatoires entre certains tours. <br/>
-                Le point central de se projet n'est pas le jeu en lui-même mais plutôt l'organisation, pour lequels nous
+                Le point central de se projet n'est pas le jeu en lui-même mais plutôt l'organisation, pour lequel nous
                 avons utilisé plusieurs éléments caractéristiques des méthodes qui implémentent la philosophie AGILE :
             </p>
             <IllustratedList items={[
@@ -122,8 +129,15 @@ export default function medievalHorizonPage() {
     ];
 
     const screenshots = [
-        ["","",""],
+        ["/medieval_horizon/title.png", "Écran titre", "screenshot-title"],
+        ["/medieval_horizon/menu.png", "Menu principal", "screenshot-menu"],
+        ["/medieval_horizon/game_start.png", "Début de partie", "screenshot-start"],
+        ["/medieval_horizon/in_progress.png", "Partie en cours", "screenshot-progress"],
+        ["/medieval_horizon/build.png", "Menu de construction", "screenshot-build"],
+        ["/medieval_horizon/place.png", "Placement d'un bâtiment sur la carte", "screenshot-place"],
+        ["/medieval_horizon/loose.png", "Écran de défaite", "screenshot-loose"],
     ];
+
     const links = [
         ["https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-12", "/logo/gitlab.svg"]
     ];

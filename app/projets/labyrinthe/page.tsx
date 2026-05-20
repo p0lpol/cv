@@ -213,7 +213,7 @@ export default function Bac() {
         ["/maze/mainMenu.png", "Menu principal", "mainMenu-1"],
         ["/maze/maze.png", "Labyrinthe", "maze-1"],
         ["/maze/profile.png", "Profil", "profile-1"],
-        ["/maze/steps.png", "Etapes", "steps-1"],
+            ["/maze/steps.png", "Etapes", "steps-1"],
     ];
     const links = [
         ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", "/logo/gitlab.svg"]

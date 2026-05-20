@@ -1,7 +1,7 @@
 import "./globals.css";
 import TopBarFloating from "@/src/components/TopBarFloating";
 
-import type { Viewport } from 'next'
+import type {Viewport} from 'next'
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="fr">
         <body>
-        <div className="relative flex flex-col min-h-screen w-full bg-linear-145 from-green-800 from-45% to-emerald-900 to-55%">
+        <div className="relative flex flex-col min-h-screen w-full bg-linear-145 from-emerald-200 to-green-400">
             <header className="fixed w-full p-4 flex justify-center z-50 @container">
                 <TopBarFloating />
             </header>

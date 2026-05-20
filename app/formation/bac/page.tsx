@@ -46,7 +46,7 @@ export default function Bac() {
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button onClick={() => copy("Lycée Jean Joly - Lycée de la Rivière 2 Chem. la Ouette, Saint-Louis 97421 La Réunion")}
-                                    className="text-start text-emerald-500 hover:text-emerald-600 w-fit">
+                                    className="text-start text-emerald-200 hover:text-green-400 w-fit">
                                 Lycée Jean Joly - Lycée de la Rivière<br/>
                                 2 Chem. la Ouette, Saint-Louis 97421<br/>
                                 La Réunion

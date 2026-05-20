@@ -2,7 +2,7 @@ import FormattedScreenshot from "@/src/components/FormattedScreenshot";
 
 export default function ProjectScreenshots({screenshots}: {screenshots: string[][]}) {
     return (
-        <div id="screenshots" className="scroll-section flex flex-col gap-4 bg-slate-900 p-4 rounded-xl shadow-slate-800 shadow-xl">
+        <div id="screenshots" className="scroll-section flex flex-col gap-4 bg-sky-900 p-4 rounded-xl shadow-cyan-950 shadow-xl">
             <h1>Captures d'écran du projet</h1>
             <div className="flex flex-wrap justify-center gap-4">
                 {screenshots.map((screenshot, index) => (

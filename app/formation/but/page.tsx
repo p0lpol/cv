@@ -1,7 +1,7 @@
 "use client"
 
 import BigList from "@/src/components/BigList";
-import { useCopyToClipboard } from 'usehooks-ts'
+import {useCopyToClipboard} from 'usehooks-ts'
 
 export default function But() {
     const [value, copy] = useCopyToClipboard()
@@ -53,7 +53,7 @@ export default function But() {
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button onClick={() => copy("IUT de Lille Av. Paul Langevin, 59653 Villeneuve-d'Ascq")}
-                            className="text-start text-emerald-500 hover:text-emerald-600 w-fit">
+                            className="text-start text-emerald-200 hover:text-green-400 w-fit">
                                 IUT de Lille <br/>
                                 Av. Paul Langevin, 59653 <br/>
                                 Villeneuve-d'Ascq

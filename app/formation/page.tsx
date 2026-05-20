@@ -3,13 +3,13 @@ import BigList from "@/src/components/BigList";
 export default function Page() {
     return (
         <div className="flex flex-col flex-1 w-full">
-            <h1 className="text-white text-5xl font-bold font-serif p-8">Mes Formations</h1>
+            <h1 className="text-cyan-900 text-5xl font-bold font-serif p-8">Mes Formations</h1>
             <BigList items={[
                 {
                     name: "BUT Informatique - IUT de Lille",
                     image: "/ULille-IUT.svg",
                     description: <>
-                        <h1 className="text-xl font-bold text-emerald-500">Formation Actuelle</h1>
+                        <h1 className="text-xl font-bold text-emerald-200">Formation Actuelle</h1>
                         <p>
                             BUT Informatique<br/>
                             Parcours Développement et Réalisation d'Applications<br/>

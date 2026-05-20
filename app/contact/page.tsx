@@ -1,6 +1,7 @@
 "use client"
 import {Mail} from "lucide-react";
 import {useState} from "react";
+import Image from "next/image";
 
 export function useCopy() {
     const [isCopied, setIsCopied] = useState(false);
@@ -26,8 +27,13 @@ export default function Page() {
     const {isCopied, coords, copyToClipboard} = useCopy();
     const LinkedIn = (
         {size}: {size: number}) =>
-        <img src="/LinkedIn.svg" alt="LinkedIn" style={{ height: `${size}px`, width: `${size}px` }} className="block"/>;
-
+        <Image
+            src="/LinkedIn.svg"
+            alt="LinkedIn"
+            width={size}
+            height={size}
+            className="block"
+        />
     return (
         <div className="flex flex-col flex-1 w-4/5 items-center gap-4 bg-slate-900 rounded-2xl p-8 h-fit">
             <h1 className="text-white text-5xl font-bold font-serif p-8">Me contacter</h1>
@@ -44,7 +50,7 @@ export default function Page() {
                             <b>Email:</b>
                             <button
                                 onClick={(e) => copyToClipboard("delavictoirepaul5@gmail.com", e)}
-                                className="hover:text-emerald-600 hover:cursor-pointer transition-colors duration-300"
+                                className="hover:text-green-400 hover:cursor-pointer transition-colors duration-300"
                             >
                                 <Mail size={40}/>
                             </button>
@@ -82,7 +88,7 @@ export default function Page() {
                         rows={15}
                         cols={50}
                     />
-                    <button type="submit" className="bg-white/50 hover:bg-emerald-500 rounded-lg p-4 transition-colors
+                    <button type="submit" className="bg-white/50 hover:bg-emerald-200 rounded-lg p-4 transition-colors
                     duration-300 active:opacity-50">Envoyer
                     </button>
                 </form>

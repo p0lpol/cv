@@ -5,7 +5,7 @@ import {useState} from "react";
 export default function GrowableImage({src, layoutId, alt}: {src: string, layoutId: string, alt: string}) {
     const [selectedId, setSelectedId] = useState(false);
     return (
-        <div className="p-10 bg-gray-900 min-h-fit min-w-fit">
+        <div className="p-10 bg-sky-900 min-h-fit min-w-fit">
             <div className="max-w-sm cursor-pointer group">
                 <motion.img
                     layoutId={layoutId}

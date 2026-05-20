@@ -10,7 +10,7 @@ export default function Bac() {
             important entre chaque tour, ainsi qu'un ecran de gestion pour chacune des parties de l'entreprise
             allant des employés à la publicité, ainsi que la l'import / export, la recherche et biens d'autres
             domaines. Ce projet s'inspire du jeu
-            <a className="text-emerald-500 font-bold hover:text-emerald-600" href="https://www.simuland.fr"> Simuland </a>
+            <a className="text-emerald-200 font-bold hover:text-green-400" href="https://www.simuland.fr"> Simuland </a>
             que j'ai eu l'occasion d'essayer lors de ma formation pendant mes cours de gestion et management.
             De multiples éléments sont communs entre les deux projets mais celui-ci se différencie par un
             approfondissement et l'ajout de plusieurs mécaniques de jeu.

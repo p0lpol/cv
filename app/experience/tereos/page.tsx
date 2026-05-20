@@ -39,7 +39,7 @@ export default function Bac() {
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button
                                 onClick={() => copy("Tereos Saint-Louis Rond point du Gol, Saint-Louis 97450, La Réunion")}
-                                className="text-start text-emerald-500 hover:text-emerald-600 w-fit">
+                                className="text-start text-emerald-200 hover:text-green-400 w-fit">
                                 Tereos Saint-Louis<br/>
                                 Rond point du Gol, Saint-Louis 97450<br/>
                                 La Réunion

@@ -2,8 +2,8 @@ import DifficultyCard from "@/src/components/DifficultyCard";
 
 export default function ProjectDifficulties({difficulties}: { difficulties: string[][] }) {
     return (
-        <div id="difficulties" className="scroll-section flex flex-col gap-4 bg-sky-900 p-4 rounded-xl shadow-cyan-950 shadow-xl">
-            <h1 className="font-bold text-2xl text-emerald-200">Difficultés rencontrées et solutions adoptées</h1>
+        <div id="difficulties" className="section">
+            <h1 className="section-title">Difficultés rencontrées et solutions adoptées</h1>
             <div className="grid grid-cols-2 gap-4">
                 {difficulties.map((arg, index) => (
                     <DifficultyCard key={index} difficulty={arg[0]} solution={arg[1]} result={arg[2]}/>

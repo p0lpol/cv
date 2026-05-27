@@ -1,19 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 interface TopBarItemProps {
     title: string;
     link: string;
+    active: boolean;
 }
 
-export default function TopBarItem({ title , link="/"}: TopBarItemProps) {
+export default function TopBarItem({ title, link = "/", active }: TopBarItemProps) {
     return (
-        <Link className="flex p-2 text-sm font-medium text-white
-        transition-colors duration-200 hover:text-emerald-200 rounded-lg
-        bg-cyan-950 justify-center items-center hover:bg-cyan-800 active:opacity-50
-        drop-shadow-slate-900 drop-shadow-md shadow-[inset_2px_2px_0px_0px_rgb(33,91,99)]"
-           href={link}
-        >
-            <span className="relative z-10">{title}</span>
+        <Link className="relative flex justify-center pb-4" href={link}>
+            <span className={`relative z-10 transition-colors duration-300 ${active ? "text-green-500 font-bold" : ""}`}>
+                {title}
+            </span>
+
+            {active && (
+                <motion.div
+                    layoutId="active-top-bar"
+                    className="absolute bottom-0 left-0 right-0 h-[0.2rem] bg-[#16a34a] rounded-full shadow-[0_0_30px_15px_rgba(22,163,74,0.8)]"
+                    initial={false}
+                    transition={{
+                        type: "spring",
+                        stiffness: 350,
+                        damping: 30,
+                    }}
+                />
+            )}
         </Link>
     );
 }

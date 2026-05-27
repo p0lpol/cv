@@ -25,6 +25,10 @@ export default function superCalculatorPage() {
         </div>
     );
 
+    const cadre = (
+        <p>Projet personnel individuel</p>
+    )
+
     const expectations = (
         <div className="flex flex-col gap-6">
             <h2><strong>Architecture MVC (Modèle-Vue-Contrôleur)</strong> et fonctionnalités fondamentales.</h2>
@@ -83,8 +87,6 @@ export default function superCalculatorPage() {
         </div>
     );
 
-    const bonus = <></>
-
     const difficulties = [
         [
             "Gestion des priorités opératoires (BODMAS / PEMDAS). L'évaluation linéaire d'une chaîne de caractères ne respecte pas nativement l'ordre des opérations (la multiplication/division avant l'addition).",
@@ -124,8 +126,8 @@ export default function superCalculatorPage() {
     const projectData = {
         description: description,
         dates: dates,
+        cadre: cadre,
         expectations: expectations,
-        bonus: bonus,
         difficulties: difficulties,
         screenshots: screenshots,
         links: links,

@@ -2,7 +2,7 @@ import ProjectList from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
 import ProjectBar from "@/src/components/Project/ProjectBar";
 
-export default function Bac() {
+export default function Labyrinthe() {
     const description = (
         <p>
             Ce projet a pour but de réaliser un jeu de labyrinthes comportant plusieurs fonctionnalités.
@@ -26,8 +26,12 @@ export default function Bac() {
         </div>
     );
 
+    const cadre = (
+        <p>SAE : projet académique universitaire</p>
+    )
+
     const expectations = (
-        <ul className="flex flex-col gap-6">
+        <ul className="flex flex-col gap-6 w-9/10 self-center py-4">
             <li><strong>Réaliser un jeu de labyrinthe</strong> possédant un joueur et une sortie placés aléatoirement, ainsi que des murs et des chemins</li>
             <li><strong>Deux types de labyrinthes : aléatoire et parfait</strong>
                 <ul className="list-disc ml-8 mt-2">
@@ -40,7 +44,7 @@ export default function Bac() {
                     </li>
                 </ul>
             </li>
-            <li><strong>Deux modes de jeu : Libre et Progression</strong> (accessible uniquement si connecté)
+            <li className="w-full flex flex-col"><strong>Deux modes de jeu : Libre et Progression</strong> (accessible uniquement si connecté)
                 <IllustratedList items={[
                     {
                         title: "Mode Libre",
@@ -51,7 +55,7 @@ export default function Bac() {
                     },
                     {
                         title: "Mode Progression",
-                        content: "étapes préfaites et imposées. Une étape est un niveau, dont la difficulté peut impacter différents facteur (pourcentage de murs, paramètres propres à la vue, etc.)",
+                        content: "étapes pré-faites et imposées. Une étape est un niveau, dont la difficulté peut impacter différents facteur (pourcentage de murs, paramètres propres à la vue, etc.)",
                         image: "/maze/steps.png",
                         alt: "Capture d'écran de la fenêtre de selection de la difficulté de l'étape",
                         id: "prog-1"
@@ -61,7 +65,7 @@ export default function Bac() {
             <li><strong>Pouvoir se connecter</strong> avec un nom, sauvegarder sa progression (mode progression) et la charger lors d'une prochaine connexion.</li>
             <li>En mode Progression, <strong>pouvoir revenir sur une étape</strong> déjà faite et la refaire (dans la même difficulté ou non).</li>
 
-            <li><strong>Quatre vues du labyrinthe imposées :</strong>
+            <li className="w-full flex flex-col"><strong>Quatre vues du labyrinthe imposées :</strong>
                 <IllustratedList items={[
                     {
                         title: "Vue Totale",
@@ -94,7 +98,7 @@ export default function Bac() {
                 ]}/>
             </li>
 
-            <li>
+            <li className="w-full flex flex-col">
                 <strong>Six étapes obligatoires : (si non précisée, la vue est totale par défaut)</strong>
                 <IllustratedList items={[
                     {
@@ -174,6 +178,37 @@ export default function Bac() {
                 Les contrôles ne changent pas, seule la vue est tournée.
             </li>
         </ul>;
+
+    const role = (
+        <div className="text-white w-9/10 self-center text-justify">
+            <p>Durant ce projet, nous ne nous sommes pas répartis des tâches précises et des rôles à chacun pour éviter de trop
+            grandes disparités dans les compétences demandées. Ainsi, j'ai participé à la mise en place de plusieurs aspects du projet, tels que : </p>
+            <ul className="list-disc ml-8 mt-2 gap-2 flex flex-col">
+                <li><strong><a href="#role"> L'interface utilisateur :</a></strong> j'ai conçu une partie des écrans de l'application, et j'ai retouché les écrans qui n'étaient pas conforme
+                en terme de structure. En effet, certains écrans avaient été fait avec un positionnement flottant des éléments au lieu de les contraindre.</li>
+                <li><strong><a href="#role">L'algorithmie :</a></strong> je me suis occupé de mettre en place un algorithme de détection de murs et de calcul du champs de vision du joueur dans
+                la vue limitée. C'est l'un des algorithmes les plus complexes du projet.</li>
+                <li><strong><a href="#role">L'architecture :</a></strong> j'ai consacré une partie importante de mon temps sur le projet à refactoriser et réorganiser le code afin de respecter
+                    les principes
+                    <strong><a href="#role"> SOLID</a></strong>,
+                    <strong><a href="#role"> DRY </a></strong>
+                    et le modèle <strong><a href="#role">MVC</a></strong>.</li>
+                <li><strong><a href="#role">L'équilibrage :</a></strong> la gestion de la difficulté était un point volontairement différé car non prioritaire face à l'ajout de fonctionnalités,
+                je m'y suis malgré tout impliqué afin d'avoir un jeu non seulement jouable, mais agréable et équilibré afin de limiter la frustration du joueur</li>
+                <li><strong><a href="#role">L'optimisation :</a></strong> l'UI en
+                    <strong><a href="#role"> JavaFX </a></strong>
+                    était très limité en terme de performances et pas du tout adapté à notre utilisation qui demandait l'affichage
+                de centaines d'éléments indépendants à chaque mise à jour. Afin d'améliorer les performances et de permettre au jeu d'afficher des labyrinthes plus
+                grands et plus complexes, j'ai passé un certain temps sur l'optimisation de l'affichage et des calculs de mise à jour.</li>
+                <li><strong><a href="#role">Le modèle MVC :</a></strong> je me suis occupé de la mise en place du modèle MVC en reliant le modèle et la vue avec un controleur minimal et découplé.
+                Nous étions initialement parti sur une mauvaise implémentation du modèle par manque de compréhension des concepts fondamentaux du MVC. Il a fallu presque
+                tout refaire afin d'éviter d'avoir trop de dette technique à la fin du projet.</li>
+                <li><strong><a href="#role">La musique :</a></strong> j'ai créé les bruitages et composé les deux musiques du jeu.</li>
+            </ul>
+        </div>
+    )
+
+
     const difficulties = [
         [
             "Mise en place d'un algorithme pour déterminer la visibilité des cases dans la vue limitée.",
@@ -222,8 +257,10 @@ export default function Bac() {
     const projectData = {
         description: description,
         dates: dates,
+        cadre: cadre,
         expectations: expectations,
         bonus: bonus,
+        role: role,
         difficulties: difficulties,
         screenshots: screenshots,
         links: links,
@@ -234,8 +271,8 @@ export default function Bac() {
             <h1 className="text-white text-5xl font-bold font-serif p-8" >Labyrinthe</h1>
             <h2 className="text-white text-3xl font-bold p-8">Projet de Développement Java / JavaFX</h2>
 
-            <div className="flex flex-1 w-full items-start">
-                <ProjectBar/>
+            <div className="flex flex-1 w-full h-full items-start">
+                <ProjectBar bonus={true} role={true}/>
                     <div className="flex flex-col flex-1 w-3/4 pl-8">
                         <ProjectList {...projectData} />
                     </div>

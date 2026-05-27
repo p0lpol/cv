@@ -27,6 +27,10 @@ export default function Bac() {
         </div>
     );
 
+    const cadre = (
+        <p>Projet personnel individuel</p>
+    )
+
     const expectations = (
         <div className="flex flex-col gap-6">
             <h2><strong>Réaliser un jeu de gestion d'entreprise</strong> en tour par tour qui permet de gérer
@@ -178,6 +182,7 @@ export default function Bac() {
     const projectData = {
         description: description,
         dates: dates,
+        cadre: cadre,
         expectations: expectations,
         bonus: bonus,
         difficulties: difficulties,
@@ -191,7 +196,7 @@ export default function Bac() {
             <h2 className="text-white text-3xl font-bold p-8">Projet de Développement Spring / React</h2>
 
             <div className="flex flex-1 w-full items-start">
-                <ProjectBar/>
+                <ProjectBar bonus={true}/>
                 <div className="flex flex-col flex-1 w-3/4 pl-8">
                     <ProjectList {...projectData} />
                 </div>

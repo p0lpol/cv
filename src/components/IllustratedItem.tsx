@@ -13,7 +13,7 @@ export default function IllustratedItem({title, content, image, alt, id}: Illust
     return (
         <div className="flex gap-4 items-center justify-between pb-4">
             <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-emerald-200">{title}</h1>
+                <h1 className="font-bold text-xl text-emerald-200">{title}</h1>
                 {content}
             </div>
             <GrowableImage src={image} alt={alt} layoutId={id}/>

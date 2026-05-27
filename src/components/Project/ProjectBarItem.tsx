@@ -1,13 +1,18 @@
 import Link from "next/link";
 
-export default function ProjectBarItem({title, anchor}: { title: string, anchor: string}) {
+interface ProjectBarItemProps {
+    title: string;
+    anchor: string;
+    isActive?: boolean;
+}
+
+export default function ProjectBarItem({ title, anchor, isActive = false }: ProjectBarItemProps) {
     return (
-        <Link className="flex p-2 text-sm font-medium text-white
-        transition-colors duration-200 hover:text-emerald-200 rounded-lg
-        bg-cyan-950 justify-center items-center hover:bg-slate-700 active:opacity-50"
-              href={anchor}
+        <Link
+            className={`transition-all nav-item-wrapper ${isActive ? "active-nav-item" : ""}`}
+            href={anchor}
         >
             <span className="relative z-10">{title}</span>
         </Link>
-    )
+    );
 }

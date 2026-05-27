@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="fr">
         <body>
         <div className="relative flex flex-col min-h-screen w-full bg-linear-145 from-emerald-200 to-green-400">
-            <header className="fixed w-full p-4 flex justify-center z-50 @container">
+            <header className="fixed w-1/2 m-4 flex self-center z-50 @container">
                 <TopBarFloating />
             </header>
 

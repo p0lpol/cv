@@ -7,16 +7,16 @@ interface DifficultyCardProps {
 export default function DifficultyCard({difficulty, solution, result}: DifficultyCardProps) {
     return(
         <div className="grid grid-rows-3 gap-4 bg-zinc-900 p-4 rounded-2xl">
-            <div className="flex flex-col flex-1 gap-2 p-4 bg-red-900/20 rounded-xl">
-                <h1 className="text-xl text-red-700 font-bold">Difficulté</h1>
+            <div className="difficulty-subsection bg-red-900/20">
+                <h1 className="difficulty-title text-red-600">Difficulté</h1>
                 <p>{difficulty}</p>
             </div>
-            <div className="flex flex-col flex-1 gap-2 p-4 bg-green-400/20 rounded-xl">
-                <h1 className="text-xl text-emerald-700 font-bold">Solution</h1>
+            <div className="difficulty-subsection bg-green-400/20">
+                <h1 className="difficulty-title text-emerald-400">Solution</h1>
                 <p>{solution}</p>
             </div>
-            <div className="flex flex-col flex-1 gap-2 p-4 bg-sky-900/20 rounded-xl">
-                <h1 className="text-xl text-slate-700 font-bold">Résultat</h1>
+            <div className="difficulty-subsection bg-sky-900/20">
+                <h1 className="difficulty-title text-slate-300">Résultat</h1>
                 <p>{result}</p>
             </div>
         </div>

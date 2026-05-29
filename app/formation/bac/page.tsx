@@ -2,7 +2,7 @@
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
 import books from '@/public/books.png'
-import classe from '@/public/class.png'
+import classe from '@/public/class.jpg'
 import jjUp from '@/public/jj_up.jpeg'
 
 export default function Bac() {

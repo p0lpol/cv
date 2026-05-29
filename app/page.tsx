@@ -4,8 +4,8 @@ export default function Home() {
     return (
         <main className="flex flex-col items-center min-h-dvh w-screen p-16 gap-16 bg-linear-to-b from-green-400 via-green-900 via-100% to-black py-32">
             <ProfileCard
-                name="Your Name"
-                image="https://picsum.photos/200/300"
+                name="Paul-Arnaud DELAVICTOIRE"
+                image="/moi.jpg"
         />
         <a href="/cv.pdf" download="Paul-Arnaud_DELAVICTOIRE" className="flex justify-center
         items-center bg-sky-900 hover:bg-sky-800 text-white font-bold p-4 rounded-full w-1/3 text-2xl

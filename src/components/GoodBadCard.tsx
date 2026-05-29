@@ -1,6 +1,6 @@
 import {ChevronDown} from "lucide-react";
 import React from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence, motion, Variants} from "framer-motion";
 
 export interface GoodBadCardProps {
     title: string;
@@ -8,7 +8,7 @@ export interface GoodBadCardProps {
     isPositive: boolean;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
     closed: {
         height: 0,
         opacity: 0,
@@ -29,19 +29,18 @@ const containerVariants = {
     }
 };
 
-const textVariants = {
+const textVariants: Variants = {
     closed: {
         opacity: 0,
-        y: 8, // Petit effet de glissement vers le bas à la fermeture
+        y: 8,
         transition: { duration: 0.15 }
     },
     open: {
         opacity: 1,
-        y: 0, // Revient à sa place initiale
+        y: 0,
         transition: { duration: 0.2, ease: "easeOut" }
     }
 };
-
 export default function GoodBadCard ({title, description, isPositive}: GoodBadCardProps) {
     const bgTitle = isPositive ? "bg-green-600" : "bg-red-600";
     const bgColor = isPositive ? "bg-green-800" : "bg-red-800";

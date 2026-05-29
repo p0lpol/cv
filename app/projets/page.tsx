@@ -1,7 +1,7 @@
 'use client'
 
 import YearlySection from "@/src/components/YearlySection";
-import {BigItemsProps} from "@/src/components/BigItem";
+import {BigItemsProps} from "@/src/components/BigItemLink";
 
 export default function Page() {
 

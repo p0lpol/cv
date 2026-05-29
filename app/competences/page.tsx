@@ -1,7 +1,29 @@
 import BigList from "@/src/components/BigList";
 import Collection from "@/src/components/Collection";
-import sourceCode from '@/public/source_code.jpg'
-import handShake from '@/public/handshake.jpg'
+
+// Images principales
+import sourceCode from '@/public/source_code.jpg';
+import handShake from '@/public/handshake.jpg';
+
+// 1. Importation statique de tous les logos
+import javaLogo from "@/public/logo/java.svg";
+import cLogo from "@/public/logo/c.svg";
+import pythonLogo from "@/public/logo/python.svg";
+import javascriptLogo from "@/public/logo/javascript.svg";
+import typescriptLogo from "@/public/logo/typescript.svg";
+import htmlLogo from "@/public/logo/html.svg";
+import cssLogo from "@/public/logo/css.svg";
+import reactLogo from "@/public/logo/react.svg";
+import postgresqlLogo from "@/public/logo/postgresql.svg";
+import accessLogo from "@/public/logo/access.svg";
+import gitLogo from "@/public/logo/git.svg";
+import githubLogo from "@/public/logo/github.svg";
+import gitlabLogo from "@/public/logo/gitlab.svg";
+import dockerLogo from "@/public/logo/docker.svg";
+import bashLogo from "@/public/logo/bash.svg";
+import intellijLogo from "@/public/logo/intellij.svg";
+import vscodeLogo from "@/public/logo/vscode.png";
+import trelloLogo from "@/public/logo/trello.svg";
 
 export default function Competences() {
 
@@ -9,14 +31,14 @@ export default function Competences() {
         name: "Hard Skills",
         image: sourceCode,
         description:
-        <ul className="list-disc flex flex-col flex-1 justify-evenly pl-12">
-            <li>Analyse des besoins et modélisation</li>
-            <li>Développement Orienté Objet</li>
-            <li>Conception d'applications Web Fullstack</li>
-            <li>Administration de bases de données relationnelles</li>
-            <li>Administration système Linux & Scripting</li>
-            <li>Gestion de projet Agile & Versioning</li>
-        </ul>,
+            <ul className="list-disc flex flex-col flex-1 justify-evenly pl-12">
+                <li>Analyse des besoins et modélisation</li>
+                <li>Développement Orienté Objet</li>
+                <li>Conception d'applications Web Fullstack</li>
+                <li>Administration de bases de données relationnelles</li>
+                <li>Administration système Linux & Scripting</li>
+                <li>Gestion de projet Agile & Versioning</li>
+            </ul>,
         link: "#",
         size: 96,
         imgSize: 3
@@ -55,58 +77,59 @@ export default function Competences() {
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className="text-2xl font-bold">Programmation</h2>
                             <Collection items={[
-                                {name: "java", image: "/logo/java.svg"},
-                                {name: "C", image: "/logo/c.svg"},
-                                {name: "python", image: "/logo/python.svg"}]}/>
+                                {name: "java", image: javaLogo},
+                                {name: "C", image: cLogo},
+                                {name: "python", image: pythonLogo}
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className="text-2xl font-bold">Web</h2>
                             <Collection items={[
-                            {name: "JavaScript", image: "/logo/javascript.svg"},
-                            {name: "TypeScript", image: "/logo/typescript.svg"},
-                            {name: "HTML", image: "/logo/html.svg"},
-                            {name: "CSS", image: "/logo/css.svg"}
-                                ]}/>
+                                {name: "JavaScript", image: javascriptLogo},
+                                {name: "TypeScript", image: typescriptLogo},
+                                {name: "HTML", image: htmlLogo},
+                                {name: "CSS", image: cssLogo}
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>Framework</h2>
                             <Collection items={[
-                            {name: "React", image: "/logo/react.svg"},
-                                ]}/>
+                                {name: "React", image: reactLogo},
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>Base de Données</h2>
                             <Collection items={[
-                            {name: "PostgreSQL", image: "/logo/postgresql.svg"},
-                            {name: "Microsoft Access", image: "/logo/access.svg"},
-                                ]}/>
+                                {name: "PostgreSQL", image: postgresqlLogo},
+                                {name: "Microsoft Access", image: accessLogo},
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>Versionnage</h2>
                             <Collection items={[
-                            {name: "Git", image: "/logo/git.svg"},
-                            {name: "GitHub", image: "/logo/github.svg"},
-                            {name: "GitLab", image: "/logo/gitlab.svg"},
-                                ]}/>
+                                {name: "Git", image: gitLogo},
+                                {name: "GitHub", image: githubLogo},
+                                {name: "GitLab", image: gitlabLogo},
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>Kernel Linux</h2>
                             <Collection items={[
-                            {name: "Docker", image: "/logo/docker.svg"},
-                            {name: "Bash", image: "/logo/bash.svg"},
-                                ]}/>
+                                {name: "Docker", image: dockerLogo},
+                                {name: "Bash", image: bashLogo},
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>IDE</h2>
                             <Collection items={[
-                            {name: "IntelliJ IDEA", image: "/logo/intellij.svg"},
-                            {name: "Visual Studio Code", image: "/logo/vscode.png"},
-                                ]}/>
+                                {name: "IntelliJ IDEA", image: intellijLogo},
+                                {name: "Visual Studio Code", image: vscodeLogo},
+                            ]}/>
                         </div>
                         <div className="flex flex-col items-baseline gap-4 p-4 w-full">
                             <h2 className={`text-2xl font-bold`}>Gestion de projet</h2>
-                        <Collection items={[
-                            {name: "Trello", image: "/logo/trello.svg"},
+                            <Collection items={[
+                                {name: "Trello", image: trelloLogo},
                             ]}/>
                         </div>
                     </div>

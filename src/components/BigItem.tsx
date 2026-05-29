@@ -16,12 +16,12 @@ export default function BigItem({
                                     image,
                                     description,
                                     fullSize = false,
-                                    size = 96,
+                                    size,
                                     imgSize = 1,
                                     bg = false
                                 }: BigItemProps) {
 
-    const calculatedHeight = `${size * 4}px`;
+    const calculatedHeight = size ? `${size * 4}px` : 'auto' ;
 
     return (
         <div
@@ -42,7 +42,7 @@ export default function BigItem({
                     src={image}
                     alt={name}
                     width={imgSize * 400}
-                    height={size * 16}
+                    height={imgSize * 16}
                     style={{
                         width: fullSize ? "auto" : `${400 * imgSize}px`,
                         height: fullSize ? "100%" : "auto"

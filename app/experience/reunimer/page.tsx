@@ -1,9 +1,57 @@
 "use client"
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
+import GoodBadCard, {GoodBadCardProps} from "@/src/components/GoodBadCard";
 
 export default function Bac() {
     const [_value, copy] = useCopyToClipboard()
+
+    const retrospectives: GoodBadCardProps[] = [
+        {
+            title: "L'équipe de taille réduite",
+            description: "L'équipe informatique étant de taille assez réduite (3 informaticiens pour 300 employés), " +
+                "je devais être assez autonome sur les développement. J'étais souvent seul développeur sur une application " +
+                "full-stack, j'aurais aimé avoir une équipe plus conséquente pour m'accompagner sur certaines tâches difficiles.",
+            isPositive: false,
+        },
+        {
+            title: "Politique IA souple",
+            description: "L'entreprise encourage l'utilisation d'IA générative durant le développement à la fois dans un but " +
+                "pédagogique et de gain de productivité. Etant pratiquement seul développeur sur le projet, l'accélération de " +
+                "tâches répétitives par un agent dédié m'a permis de mener à bien la mission qui m'a été confiée.",
+            isPositive: true,
+        },
+        {
+            title: "Un système complexe et pas documenté",
+            description: "L'application à modernisé ne possédait pratiquement aucune documentation technique outre quelques " +
+                "commentaires dans la base de données. Ma première mission était d'analyser la structure de données et le " +
+                "fonctionnement de l'application afin d'en faire une documentation claire et structurée. J'aurais aimé avoir " +
+                "quelques ressources supplémentaire explicatives pour mieux comprendre les mécanismes complexes implémentés.",
+            isPositive: false,
+        },
+        {
+            title: "Une stack intelligible et des modèles standards",
+            description: "Bien que n'ayant aucune expérience préalable avec Django, l'apprentissage des fondamentaux et " +
+                "l'utilisation d'ORM était plutôt rapide. De plus, ayant déjà de l'expérience avec PostgreSQL et NextJS / React, " +
+                "j'ai pu avancer assez rapidement dans le développement sans avoir à me plonger dans plusieurs nouveaux langages ou frameworks",
+            isPositive: true,
+        },
+        {
+            title: "La répétitivité des tâches",
+            description: "Ma mission étant de migrer un système de gestion de données référentielles, beaucoup de mon " +
+                "temps de travail s'est résumé à faire plus ou moins la même chose. J'aurais préféré avoir un peu plus" +
+                "de diversité autant dans l'analyse que dans le développement réel.",
+            isPositive: false,
+        },
+        {
+            title: "L'accompagnement pédagogique",
+            description: "Malgré la taille de l'équipe et la charge de travail quotidien, mon maître de stage était particulièrement" +
+                "présent pour répondre à mes questions et m'accompagner dans l'analyse du fonctionnement de l'application legacy. " +
+                "Cela m'a permi de mieux comprendre les règles métiers, les mécanismes et le besoin derrière l'application, ce qui " +
+                "a accéléré et facilité le développement du nouveau logiciel.",
+            isPositive: true,
+        }
+    ]
 
     return (
         <div className="flex flex-col flex-1 w-full items-center mb-15 bg-linear-to-b from-green-400 via-green-900 to-black py-16">
@@ -77,6 +125,34 @@ export default function Bac() {
                     link: "#",
                     fullSize: true,
                     size: 96,
+                    imgSize: 4
+                },
+                {
+                    name: "Retrospective",
+                    image: "",
+                    description:
+                        <div className="flex flex-row gap-32 mr-10 p-16 items-start w-full">
+                            <div className="flex flex-col flex-1 gap-16">
+                                {retrospectives
+                                    .filter((_, index) => index % 2 === 0)
+                                    .map((value, index) => (
+                                        <GoodBadCard key={`left-${index}`} {...value} />
+                                    ))
+                                }
+                            </div>
+
+                            <div className="flex flex-col flex-1 gap-16">
+                                {retrospectives
+                                    .filter((_, index) => index % 2 !== 0)
+                                    .map((value, index) => (
+                                        <GoodBadCard key={`right-${index}`} {...value} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    ,
+                    link: "#",
+                    fullSize: false,
                     imgSize: 4
                 },
                 {

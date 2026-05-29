@@ -191,16 +191,18 @@ export default function Bac() {
     }
 
     return (
-        <div className="flex flex-col flex-1 w-full items-center mb-15">
-            <h1 className="text-white text-5xl font-bold font-serif p-8" >Financial</h1>
-            <h2 className="text-white text-3xl font-bold p-8">Projet de Développement Spring / React</h2>
+        <main className="bg-linear-to-b from-green-400 via-green-900 to-black py-16 flex flex-col justify-center items-center">
+            <div className="flex flex-col flex-1 w-9/10 items-center mb-15">
+                <h1 className="text-white text-5xl font-bold font-serif p-8" >Financial</h1>
+                <h2 className="text-white text-3xl font-bold p-8">Projet de Développement Spring / React</h2>
 
-            <div className="flex flex-1 w-full items-start">
-                <ProjectBar bonus={true}/>
-                <div className="flex flex-col flex-1 w-3/4 pl-8">
-                    <ProjectList {...projectData} />
+                <div className="flex flex-1 w-full items-start">
+                    <ProjectBar bonus={true}/>
+                    <div className="flex flex-col flex-1 w-3/4 pl-8">
+                        <ProjectList {...projectData} />
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

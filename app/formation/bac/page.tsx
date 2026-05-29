@@ -6,6 +6,8 @@ export default function Bac() {
     const [value, copy] = useCopyToClipboard()
 
     return (
+        <main className="bg-linear-to-b from-green-400 via-green-900 to-black py-16">
+
         <div className="flex flex-col flex-1 w-full items-center mb-15">
             <h1 className="text-white text-5xl font-bold font-serif p-8" >Baccalaureat</h1>
             <BigList items={[
@@ -22,7 +24,6 @@ export default function Bac() {
                         </ul>
                     </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 },
                 {
@@ -37,7 +38,6 @@ export default function Bac() {
                         </ul>
                     </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 },
                 {
@@ -57,10 +57,10 @@ export default function Bac() {
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 }
             ]}/>
         </div>
+        </main>
     )
 }

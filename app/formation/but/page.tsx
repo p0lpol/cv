@@ -6,7 +6,7 @@ import {useCopyToClipboard} from 'usehooks-ts'
 export default function But() {
     const [value, copy] = useCopyToClipboard()
     return (
-        <div className="flex flex-col flex-1 w-full items-center mb-15">
+        <div className="flex flex-col flex-1 w-full items-center mb-15 bg-linear-to-b from-green-400 via-green-900 to-black py-16">
             <h1 className="text-white text-5xl font-bold font-serif p-8" >BUT Informatique</h1>
             <h2 className="text-white text-3xl font-bold font-serif p-8" >Bachelor en informatique, formation actuelle</h2>
             <BigList items={[

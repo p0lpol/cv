@@ -6,25 +6,25 @@ export default function Bac() {
     const [_value, copy] = useCopyToClipboard()
 
     return (
-        <div className="flex flex-col flex-1 w-full items-center mb-15">
+        <div className="flex flex-col flex-1 w-full items-center mb-15 bg-linear-to-b from-green-400 via-green-900 to-black py-16">
             <h1 className="text-white text-5xl font-bold font-serif p-8" >Stage Développeur</h1>
-            <BigList items={[
+            <BigList isLink={false} items={[
                 {
-                    name: "Détails du stage",
-                    image: "/usine_du_port.webp",
+                    name: "Présentation du stage",
+                    image: "/reunimer/usine-du-port.webp",
                     description:
-                        <div className="flex flex-col justify-evenly items-center h-100 w-2/3">
-                            <ul className="flex flex-col items-baseline ml-20 gap-4 text-justify">
+                        <div className="flex flex-col justify-evenly items-center">
+                            <ul className="flex flex-col items-baseline ml-10 gap-4 text-justify">
                                 <li><strong>Rôle</strong> : Développeur full-stack</li>
                                 <li><strong>Durée</strong> : 10 semaines (6 avril au 12 juin 2026)</li>
                                 <li><strong>Objectif</strong> : Découvrir le développement d'application dans le milieu professionnel,
                                     réaliser la mise à jour d'un module du système d'informations de l'entreprise</li>
                                 <li><strong>Tâches</strong> :
-                                    <ul className="list-disc flex flex-col">
-                                        <li className="ml-10">Documenter le module actuellement en place</li>
-                                        <li className="ml-10">Migrer plusieurs bases de données depuis Microsoft Access vers PostgreSQL</li>
-                                        <li className="ml-10">Redévelopper le module en architecture REST avec un backend Django et un front end Next.js</li>
-                                        <li className="ml-10">Mettre en place un système de permissions larges (RBAC) et fines (ABAC)</li>
+                                    <ul className="list-disc flex flex-col ml-10">
+                                        <li>Documenter le module actuellement en place</li>
+                                        <li>Migrer plusieurs bases de données depuis Microsoft Access vers PostgreSQL</li>
+                                        <li>Redévelopper le module en architecture REST avec un backend Django et un front end Next.js</li>
+                                        <li>Mettre en place un système de permissions larges (RBAC) et fines (ABAC)</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -35,9 +35,9 @@ export default function Bac() {
                 },
                 {
                     name: "Sujet du stage",
-                    image: "",
+                    image: "/reunimer/bateau.webp",
                     description:
-                        <div className="flex flex-col text-justify gap-4">
+                        <div className="flex flex-col text-justify gap-4 ml-10">
                             <h2><strong><a href="#"> Intitulé stage </a></strong> : Développement d’un module de gestion de référentiels et migration de données Access vers PostgreSQL</h2>
 
                             <p><strong><a href="#"> Sujet </a></strong> : Le stage s’inscrit dans un projet de modernisation d’applications métier actuellement développées sous
@@ -45,29 +45,45 @@ export default function Bac() {
                                 L’objectif du stage est de développer un <strong><a href="#"> module de gestion de données référentielles </a></strong> (tables de base : familles, catégories, produits, ingrédients, unités, etc.)
                                 avec <strong><a href="#"> interface de gestion </a></strong> (création, modification, suppression – CRUD), ainsi que de participer à la mise en place d’un mécanisme de
                                 <strong><a href="#"> synchronisation des données </a></strong> entre les applications Access existantes et la nouvelle base <strong><a href="#"> PostgreSQL </a></strong>.
-                            Le stagiaire sera amené à :
-                                <ul>
-                                    <li><strong><a href="#"> ANALYSER </a></strong> la structure des bases de données Access existantes,</li>
-                                    <li><strong><a href="#">CONCEVOIR </a></strong> la structure des tables dans PostgreSQL,</li>
+                                Le stagiaire sera amené à :</p>
+                                <ul className="list-disc ml-10">
+                                    <li><strong><a href="#"> ANALYSER </a></strong> la structure des bases de données Access existantes</li>
+                                    <li><strong><a href="#">CONCEVOIR </a></strong> la structure des tables dans PostgreSQL</li>
+                                    <li><strong><a href="#"> DEVELOPPER </a></strong> des scripts de migration de données</li>
+                                    <li><strong><a href="#"> DEVELOPPER </a></strong> un module de gestion des référentiels (interface simple)</li>
+                                    <li><strong><a href="#"> METTRE EN PLACE </a></strong> des opérations CRUD (Create, Read, Update, Delete)</li>
+                                    <li><strong><a href="#"> DOCUMENTER </a></strong> la structure de la base de données et les développements réalisés</li>
+                                    <li><strong><a href="#"> PARTICIPER </a></strong> aux tests et à la validation des données</li>
                                 </ul>
-
-
-                            développer des scripts de migration de données,
-                            développer un module de gestion des référentiels (interface simple),
-                            mettre en place des opérations CRUD (Create, Read, Update, Delete),
-                            documenter la structure de la base de données et les développements réalisés,
-                            participer aux tests et à la validation des données.
-                                Le stage permettra à l’étudiant de travailler sur un projet réel de modernisation d’un système d’information, incluant base de données, développement logiciel, migration de données et bonnes pratiques de développement.</p>
+                                <p>Le stage permettra à l’étudiant de travailler sur un projet réel de modernisation d’un système d’information, incluant base de données, développement logiciel, migration de données et bonnes pratiques de développement.</p>
                         </div>,
                     link: "#",
                     fullSize: true,
-                    size: 96
+                    size: 140,
+                    imgSize: 4
+                },
+                {
+                    name: "Compétences techniques",
+                    image: "/reunimer/stack-traiteur.png",
+                    description:
+                        <div className="ml-10 flex flex-col gap-8">
+                            <p>Ce stage m'a permis de consolider mes compétences en analyse et en architecture logicielle en intervenant sur l'ensemble d'une stack technique moderne. J'ai notamment exploité les technologies suivantes :</p>
+                            <ul className="list-disc ml-10">
+                                <li><strong><a href="https://www.postgresql.org/">PostgreSQL :</a></strong> Système de Gestion de Base de Données Relationnelle sélectionné pour assurer la migration, l'intégrité et la gestion des données référentielles de l'entreprise.</li>
+                                <li><strong><a href="https://www.djangoproject.com/">Django</a></strong> & <strong><a href="https://www.django-rest-framework.org/"> Django REST Framework (DRF) :</a></strong> conception et développement du back-end sous forme d'<strong><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api">API RESTful</a></strong>. L'accès aux données a été modélisé via l'<strong><a href="https://fr.wikipedia.org/wiki/Mapping_objet-relationnel">ORM</a></strong> de Django, tandis que DRF a permis la sérialisation et la sécurisation stricte des endpoints.</li>
+                                <li><strong><a href="https://nextjs.org/">Next.js</a></strong> & <strong><a href="https://react.dev/">React :</a></strong> développement de l'interface client (front-end). L'utilisation du framework Next.js a permis d'optimiser les performances de l'application web, couplé à la bibliothèque React pour concevoir une interface utilisateur dynamique, réactive et ergonomique.</li>
+                            </ul>
+                        </div>,
+                    link: "#",
+                    fullSize: true,
+                    size: 96,
+                    imgSize: 4
                 },
                 {
                     name: "Etablissement",
-                    image: "/atlas_cove.jpg",
+                    image: "/reunimer/atlas_cove.jpg",
                     description:
-                        <div className="flex flex-col justify-evenly h-70 gap-4">
+                        <div className="flex flex-col justify-evenly h-70 gap-4 ml-10">
                             <button
                                 onClick={() => copy("Reunimer Le Port, 9 Rue Armagnac, Le Port 97420, La Réunion")}
                                 className="text-start text-emerald-200 hover:text-green-400 w-fit">

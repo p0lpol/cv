@@ -40,16 +40,18 @@ export default function Page() {
     }
 
     return (
-        <div className="flex flex-col flex-1 w-full items-center mb-15">
-            <h1 className="text-cyan-900 text-5xl font-bold font-serif p-8 self-start">Mes Projets</h1>
-            <YearlySection
-                items={[Financials]}
-                year={2026}
+        <main className="bg-linear-to-b from-green-400 via-green-900 via-30% to-black to-50% pt-16 flex flex-col justify-center items-center">
+            <div className="flex flex-col flex-1 w-9/10 items-center min-h-dvh">
+                <h1 className="text-cyan-900 text-5xl font-bold font-serif p-8 self-start">Mes Projets</h1>
+                <YearlySection
+                    items={[Financials]}
+                    year={2026}
+                    />
+                <YearlySection
+                    items={[Labyrinthe, Calculatrice, MedievalHorizon]}
+                    year={2025}
                 />
-            <YearlySection
-                items={[Labyrinthe, Calculatrice, MedievalHorizon]}
-                year={2025}
-            />
-        </div>
+            </div>
+        </main>
     )
 }

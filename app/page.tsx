@@ -2,7 +2,7 @@ import ProfileCard from "@/src/components/ProfileCard";
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center min-h-fit w-screen p-16 gap-16">
+        <main className="flex flex-col items-center min-h-dvh w-screen p-16 gap-16 bg-linear-to-b from-green-400 via-green-900 via-100% to-black py-32">
             <ProfileCard
                 name="Your Name"
                 image="https://picsum.photos/200/300"

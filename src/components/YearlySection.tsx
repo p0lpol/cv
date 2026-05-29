@@ -5,7 +5,7 @@ import {ChevronDown} from "lucide-react";
 import {JSX, useState} from "react";
 import BigList from "@/src/components/BigList";
 import YearlySectionAnimation from "@/src/animations/YearlySectionDrawer";
-import {BigItemsProps} from "@/src/components/BigItem";
+import {BigItemsProps} from "@/src/components/BigItemLink";
 
 export default function YearlySection({ items, year }: { items: BigItemsProps[], year: number }): JSX.Element {
     const [isOpen, setOpen] = useState(true);

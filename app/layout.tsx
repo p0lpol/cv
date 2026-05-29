@@ -10,17 +10,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="fr">
-        <body>
-        <div className="relative flex flex-col min-h-screen w-full bg-linear-145 from-emerald-200 to-green-400">
-            <header className="fixed w-1/2 m-4 flex self-center z-50 @container">
+        <html lang="fr" className="h-full min-h-fit">
+        <body className="min-h-dvh ">
+            <header className="z-10 inset-y-0 top-4 fixed left-1/4 right-1/4 h-fit">
                 <TopBarFloating />
             </header>
-
-            <main className="flex-1 flex flex-col items-center justify-center p-4 mt-24">
-                {children}
-            </main>
-        </div>
+            {children}
         </body>
         </html>
     );

@@ -1,11 +1,11 @@
 'use client'
 
 import {MouseEvent, useCallback, useState} from "react";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 interface ProfileCardProps {
     name: string;
-    image: string;
+    image: StaticImageData;
 }
 
 export function throttle<T extends (...args: any[]) => any>(

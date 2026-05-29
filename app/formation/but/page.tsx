@@ -4,7 +4,7 @@ import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from 'usehooks-ts'
 import sourceCode from '@/public/source_code.jpg'
 import iutHall from '@/public/iut_hall.jpg'
-import iut from '@/public/iut.jpg.jpg'
+import iut from '@/public/iut.jpg'
 
 export default function But() {
     const [value, copy] = useCopyToClipboard()

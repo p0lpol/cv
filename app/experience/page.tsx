@@ -1,4 +1,6 @@
 import BigList from "@/src/components/BigList";
+import reunimer from '@/public/reunimer/reunimer.png';
+import tereos from '@/public/tereos.svg'
 
 export default function Page() {
     return (
@@ -7,13 +9,13 @@ export default function Page() {
             <BigList items={[
                 {
                     name: "Stage Développeur - Réunimer",
-                    image: "/reunimer/reunimer.png",
+                    image: reunimer,
                     description: "",
                     link: "/experience/reunimer"
                 },
                 {
                     name: "Stage Ouvrier - Tereos",
-                    image: "/tereos.svg",
+                    image: tereos,
                     description: "",
                     link: "/experience/tereos"
                 },

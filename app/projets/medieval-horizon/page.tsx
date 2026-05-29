@@ -1,6 +1,23 @@
 import ProjectList from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
 import ProjectBar from "@/src/components/Project/ProjectBar";
+import {StaticImageData} from "next/image"; // Importation de StaticImageData
+// 1. Importation statique de toutes les images
+import radiateurImg from "@/public/medieval_horizon/radiateur_informations.png";
+import sprintBacklogImg from "@/public/medieval_horizon/sprint_backlog.png";
+import tableauScrumImg from "@/public/medieval_horizon/tableau_scrum.png";
+import burndownImg from "@/public/medieval_horizon/burndown_chart.png";
+
+import titleImg from "@/public/medieval_horizon/title.png";
+import menuImg from "@/public/medieval_horizon/menu.png";
+import gameStartImg from "@/public/medieval_horizon/game_start.png";
+import inProgressImg from "@/public/medieval_horizon/in_progress.png";
+import buildImg from "@/public/medieval_horizon/build.png";
+import placeImg from "@/public/medieval_horizon/place.png";
+import looseImg from "@/public/medieval_horizon/loose.png";
+
+import gitlabLogo from "@/public/logo/gitlab.svg";
+import {div} from "framer-motion/client";
 
 export default function medievalHorizonPage() {
     const description = (
@@ -28,7 +45,7 @@ export default function medievalHorizonPage() {
     const expectations = (
         <div className="flex flex-col gap-6">
             <h2><strong>Réaliser un jeu en utilisant la philosophie AGILE pour s'organiser.</strong> Le thème est libre et les équipes de 6 développeurs
-            sont imposées.</h2>
+                sont imposées.</h2>
             <p>
                 Le jeu ne possède pas d'interface dédié, nous utilisons le terminal pour afficher
                 les différents éléments du jeu à l'aide de différentes techniques : ascii art, émoticônes, texte.
@@ -42,7 +59,7 @@ export default function medievalHorizonPage() {
                 {
                     title: "Radiateur d'informations",
                     content: "Affichage visuel et très accessible, typique des méthodes agiles (Scrum, Kanban), permettant à l'équipe et aux parties prenantes de connaître l'état d'avancement, le flux de travail et les indicateurs clés en un simple coup d'œil.",
-                    image: "/medieval_horizon/radiateur_informations.png",
+                    image: radiateurImg, // Remplacement ici
                     alt: "Illustration d'un radiateur d'informations affichant un tableau de bord et les métriques d'une équipe agile",
                     id: "radiateur-1"
                 },
@@ -50,7 +67,7 @@ export default function medievalHorizonPage() {
                     title: "Sprint Backlog",
                     content: "Ensemble constitué de l'Objectif de Sprint, des éléments du Product Backlog sélectionnés" +
                         " pour le Sprint actuel, et du plan d'action (les tâches) pour créer l'Incrément.",
-                    image: "/medieval_horizon/sprint_backlog.png",
+                    image: sprintBacklogImg, // Remplacement ici
                     alt: "Capture d'un Sprint Backlog affichant le plan de travail détaillé de l'itération en cours",
                     id: "sprint-backlog-1"
                 },
@@ -58,7 +75,7 @@ export default function medievalHorizonPage() {
                     title: "Tableau Scrum",
                     content: "Outil visuel permettant de suivre en temps réel la progression des éléments du Sprint " +
                         "Backlog à travers différents statuts (généralement : À faire, En cours, Terminé).",
-                    image: "/medieval_horizon/tableau_scrum.png",
+                    image: tableauScrumImg, // Remplacement ici
                     alt: "Image d'un tableau Scrum avec des cartes ou post-its répartis dans les colonnes d'avancement",
                     id: "scrum-board-1"
                 },
@@ -66,7 +83,7 @@ export default function medievalHorizonPage() {
                     title: "Burndown Chart",
                     content: "Graphique servant de radiateur d'informations pour illustrer la quantité de travail" +
                         " restante (en heures ou en points) au fil du temps dans un Sprint.",
-                    image: "/medieval_horizon/burndown_chart.png",
+                    image: burndownImg, // Remplacement ici
                     alt: "Graphique linéaire descendant montrant le reste à faire par rapport aux jours écoulés du Sprint",
                     id: "burndown-1"
                 }
@@ -93,53 +110,45 @@ export default function medievalHorizonPage() {
         ],
         [
             "Gérer les conflits de versionnage sur Git. Avec plusieurs développeurs travaillant simultanément sur les mêmes portions de code, les fusions devenaient souvent chaotiques, ce qui entraînait une perte de temps considérable et le risque d'écraser le travail des autres.",
-
             "Mettre en place une communication proactive en instaurant la règle de prévenir l'équipe à voix haute avant chaque 'push' ou fusion importante. Nous avons également défini des règles strictes sur la création et la durée de vie des branches.",
-
             "Une réduction drastique des conflits lors des intégrations. L'historique du dépôt est nettement plus propre et ordonné, avec beaucoup moins de branches parallèles abandonnées, ce qui fluidifie grandement notre flux de travail collectif."
         ],
         [
             "Tenir les délais et respecter la durée fixe imposée par le sprint. Nous avions une tendance naturelle à sous-estimer la charge de travail et la complexité lors de la planification, ce qui générait une surcharge en fin d'itération et nous empêchait de clôturer le sprint sereinement.",
-
             "Revoir notre système d'estimation en augmentant le coût en effort (Story Points) des tâches pour y inclure une marge d'incertitude. En parallèle, nous avons drastiquement réduit le nombre d'éléments assignés simultanément à chaque membre de l'équipe pour favoriser la concentration sur un seul sujet à la fois.",
-
             "Une diminution significative du nombre de tickets inachevés et reportés au sprint suivant. Au lieu d'avoir de nombreuses tâches entamées mais incomplètes, l'équipe livre désormais des fonctionnalités terminées à 100%, ce qui rend notre vélocité beaucoup plus stable et motivante."
         ],
         [
             "Gérer le chevauchement de code et la confusion des responsabilités. Plusieurs développeurs se retrouvaient souvent à travailler sur les mêmes composants ou fonctionnalités en même temps, ce qui entraînait un manque de clarté sur 'qui fait quoi' et générait du travail en double.",
-
             "Réorganiser la distribution des tâches lors de la planification en assignant des tickets touchant à des domaines fonctionnels bien distincts. Nous avons veillé à délimiter le périmètre d'intervention de chaque développeur à un grand axe ou module spécifique de l'application.",
-
             "Une disparition quasi totale des modifications concurrentes sur un même fichier. En travaillant sur des axes de développement isolés, nous avons drastiquement évité les conflits Git complexes tout en renforçant l'autonomie de chacun sur sa partie du code."
         ],
         [
             "Maintenir une application rigoureuse de la méthode Scrum au quotidien. Face à la pression ou à la facilité, nous avions une forte tendance à contourner les règles du framework pour dériver vers une organisation beaucoup plus chaotique, improvisée et moins prévisible.",
-
             "Nous imposer une discipline stricte, dans un but purement pédagogique, en refusant toute action ou prise de décision qui sortirait du cadre défini par Scrum. Nous avons pris le parti de nous forcer à appliquer les cérémonies, les rôles et les artefacts à la lettre, sans exception.",
-
             "Une efficacité globale et une vélocité légèrement supérieures à celles obtenues avec notre ancienne organisation hybride. En supprimant les approximations de notre méthode 'maison', l'équipe a gagné en clarté, ce qui a permis d'optimiser notre cycle de développement."
         ],
         [
             "Maintenir le radiateur d'informations à jour de manière régulière. Absorbée par le développement pur, l'équipe oubliait souvent de répercuter son avancée sur nos outils visuels, ce qui rendait le suivi obsolète et trompeur pour le reste de l'équipe.",
-
             "Déléguer la responsabilité principale de cette maintenance au Scrum Master. Ce dernier s'est chargé de vérifier quotidiennement la cohérence des données affichées et d'accompagner l'équipe pour qu'elle prenne le réflexe d'actualiser son avancement.",
-
             "L'assurance d'avoir en permanence des informations claires, fiables et d'actualité sous les yeux. Cette rigueur nous a permis d'éviter l'oubli de tâches en cours de route et a considérablement amélioré la transparence de notre flux de travail."
         ]
     ];
 
-    const screenshots = [
-        ["/medieval_horizon/title.png", "Écran titre", "screenshot-title"],
-        ["/medieval_horizon/menu.png", "Menu principal", "screenshot-menu"],
-        ["/medieval_horizon/game_start.png", "Début de partie", "screenshot-start"],
-        ["/medieval_horizon/in_progress.png", "Partie en cours", "screenshot-progress"],
-        ["/medieval_horizon/build.png", "Menu de construction", "screenshot-build"],
-        ["/medieval_horizon/place.png", "Placement d'un bâtiment sur la carte", "screenshot-place"],
-        ["/medieval_horizon/loose.png", "Écran de défaite", "screenshot-loose"],
+    // 2. Déclaration stricte du type Tuple avec UNIQUEMENT StaticImageData
+    const screenshots: [StaticImageData, string, string][] = [
+        [titleImg, "Écran titre", "screenshot-title"],
+        [menuImg, "Menu principal", "screenshot-menu"],
+        [gameStartImg, "Début de partie", "screenshot-start"],
+        [inProgressImg, "Partie en cours", "screenshot-progress"],
+        [buildImg, "Menu de construction", "screenshot-build"],
+        [placeImg, "Placement d'un bâtiment sur la carte", "screenshot-place"],
+        [looseImg, "Écran de défaite", "screenshot-loose"],
     ];
 
-    const links = [
-        ["https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-12", "/logo/gitlab.svg"]
+    // 2. Idem ici pour les liens
+    const links: [string, StaticImageData][] = [
+        ["https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-12", gitlabLogo]
     ];
 
     const projectData = {
@@ -159,10 +168,10 @@ export default function medievalHorizonPage() {
 
             <div className="flex flex-1 w-full items-start">
                 <ProjectBar/>
-                    <div className="flex flex-col flex-1 w-3/4 pl-8">
-                        <ProjectList cadre={undefined} {...projectData} />
-                    </div>
+                <div className="flex flex-col flex-1 w-3/4 pl-8">
+                    <ProjectList cadre={undefined} {...projectData} />
                 </div>
+            </div>
         </div>
     );
 }

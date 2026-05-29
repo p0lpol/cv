@@ -1,6 +1,9 @@
 "use client"
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
+import books from '@/public/books.png'
+import classe from '@/public/class.png'
+import jjUp from '@/public/jj_up.jpeg'
 
 export default function Bac() {
     const [value, copy] = useCopyToClipboard()
@@ -13,7 +16,7 @@ export default function Bac() {
             <BigList items={[
                 {
                     name: "Baccalaureat 2022-2023",
-                    image: "/books.png",
+                    image: books,
                     description:
                     <div className="flex flex-col justify-evenly items-center h-50">
                         <p className="text-2xl">Compétences clés</p>
@@ -28,7 +31,7 @@ export default function Bac() {
                 },
                 {
                     name: "Unités d'enseignement",
-                    image: "/class.jpg",
+                    image: classe,
                     description:
                     <div className="flex flex-col justify-evenly items-center h-50">
                         <ul className="list-none flex flex-col flex-1 justify-evenly w-2/3 text-lg">
@@ -42,7 +45,7 @@ export default function Bac() {
                 },
                 {
                     name: "Etablissement",
-                    image: "/jj_up.jpeg",
+                    image: jjUp,
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button onClick={() => copy("Lycée Jean Joly - Lycée de la Rivière 2 Chem. la Ouette, Saint-Louis 97421 La Réunion")}

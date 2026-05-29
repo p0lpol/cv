@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import {ReactNode} from "react";
 
 interface BigItemProps {
     name: string;
-    image: string;
+    image?: StaticImageData;
     description: ReactNode;
     fullSize?: boolean;
     size?: number;

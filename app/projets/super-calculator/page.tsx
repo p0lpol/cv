@@ -1,6 +1,15 @@
 import ProjectList from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
 import ProjectBar from "@/src/components/Project/ProjectBar";
+import {StaticImageData} from "next/image"; // Importation du type pour les tableaux
+// 1. Importation statique de toutes les images et GIFs
+import additionGif from "@/public/calculator/addition.gif";
+import substractionGif from "@/public/calculator/substraction.gif";
+import multiplicationGif from "@/public/calculator/multiplication.gif";
+import divisionGif from "@/public/calculator/division.gif";
+import parenthesisGif from "@/public/calculator/parenthesis.gif";
+import logGif from "@/public/calculator/log.gif";
+import gitlabLogo from "@/public/logo/gitlab.svg";
 
 export default function superCalculatorPage() {
     const description = (
@@ -44,42 +53,42 @@ export default function superCalculatorPage() {
                 {
                     title: "L'Addition",
                     content: "Permet de cumuler des valeurs entières ou décimales. Le modèle traite l'opérateur '+' et met à jour instantanément le résultat affiché à l'écran.",
-                    image: "/calculator/addition.gif",
+                    image: additionGif, // Remplacement ici
                     alt: "Démonstration de la fonctionnalité d'addition",
                     id: "calc-addition"
                 },
                 {
                     title: "La Soustraction",
                     content: "Prend en charge la différence entre deux expressions numériques, en gérant correctement les nombres négatifs ainsi que l'enchaînement des opérateurs.",
-                    image: "/calculator/substraction.gif",
+                    image: substractionGif, // Remplacement ici
                     alt: "Démonstration de la fonctionnalité de soustraction",
                     id: "calc-substraction"
                 },
                 {
                     title: "La Multiplication",
                     content: "Opération de produit gérée en priorité par rapport à l'addition et à la soustraction grâce à un moteur d'analyse des priorités opératoires imbriqué dans le modèle.",
-                    image: "/calculator/multiplication.gif",
+                    image: multiplicationGif, // Remplacement ici
                     alt: "Démonstration de la fonctionnalité de multiplication",
                     id: "calc-multiplication"
                 },
                 {
                     title: "La Division",
                     content: "Calcule le quotient de deux nombres. Cette fonctionnalité intègre une sécurité critique au niveau du modèle pour intercepter les divisions par zéro et éviter le plantage.",
-                    image: "/calculator/division.gif",
+                    image: divisionGif, // Remplacement ici
                     alt: "Démonstration de la fonctionnalité de division",
                     id: "calc-division"
                 },
                 {
                     title: "Gestion des Parenthèses",
                     content: "Permet de forcer et modifier l'ordre naturel des priorités arithmétiques. Le parseur analyse l'ouverture et la fermeture des blocs pour isoler les sous-calculs prioritaires.",
-                    image: "/calculator/parenthesis.gif",
+                    image: parenthesisGif, // Remplacement ici
                     alt: "Démonstration de l'utilisation des parenthèses complexes",
                     id: "calc-parenthesis"
                 },
                 {
                     title: "Le Logarithme Népérien",
                     content: "Fonction mathématique avancée qui calcule le logarithme de l'expression fournie. Le modèle intègre une gestion des valeurs limites comme 0 ou une valeur négative pour éviter un plantage.",
-                    image: "/calculator/log.gif",
+                    image: logGif, // Remplacement ici
                     alt: "Démonstration de la fonctionnalité du logarithme népérien",
                     id: "calc-logarithm"
                 }
@@ -110,17 +119,19 @@ export default function superCalculatorPage() {
         ]
     ];
 
-    const screenshots = [
-        ["/calculator/addition.gif", "Fonctionnalité : L'Addition", "screenshot-add"],
-        ["/calculator/substraction.gif", "Fonctionnalité : La Soustraction", "screenshot-sub"],
-        ["/calculator/multiplication.gif", "Fonctionnalité : La Multiplication", "screenshot-multi"],
-        ["/calculator/division.gif", "Fonctionnalité : La Division", "screenshot-div"],
-        ["/calculator/parenthesis.gif", "Gestion avancée des Parenthèses", "screenshot-parenthesis"],
-        ["/calculator/log.gif", "Calcul avancé : Logarithme Népérien", "screenshot-log"],
+    // 2. Déclaration stricte du type Tuple avec UNIQUEMENT StaticImageData
+    const screenshots: [StaticImageData, string, string][] = [
+        [additionGif, "Fonctionnalité : L'Addition", "screenshot-add"],
+        [substractionGif, "Fonctionnalité : La Soustraction", "screenshot-sub"],
+        [multiplicationGif, "Fonctionnalité : La Multiplication", "screenshot-multi"],
+        [divisionGif, "Fonctionnalité : La Division", "screenshot-div"],
+        [parenthesisGif, "Gestion avancée des Parenthèses", "screenshot-parenthesis"],
+        [logGif, "Calcul avancé : Logarithme Népérien", "screenshot-log"],
     ];
 
-    const links = [
-        ["https://gitlab.univ-lille.fr/iut-info/calculatrice", "/logo/gitlab.svg"]
+    // 2. Idem ici pour les liens
+    const links: [string, StaticImageData][] = [
+        ["https://gitlab.univ-lille.fr/iut-info/calculatrice", gitlabLogo]
     ];
 
     const projectData = {

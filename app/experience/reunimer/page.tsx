@@ -2,6 +2,10 @@
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
 import GoodBadCard, {GoodBadCardProps} from "@/src/components/GoodBadCard";
+import usineDuPort from '@/public/reunimer/usine-du-port.webp'
+import atlasCove from '@/public/reunimer/atlas_cove.jpg'
+import bateau from '@/public/reunimer/bateau.webp'
+import stackTraiteur from '@/public/reunimer/stack-traiteur.png'
 
 export default function Bac() {
     const [_value, copy] = useCopyToClipboard()
@@ -59,7 +63,7 @@ export default function Bac() {
             <BigList isLink={false} items={[
                 {
                     name: "Présentation du stage",
-                    image: "/reunimer/usine-du-port.webp",
+                    image: usineDuPort,
                     description:
                         <div className="flex flex-col justify-evenly items-center">
                             <ul className="flex flex-col items-baseline ml-10 gap-4 text-justify">
@@ -83,7 +87,7 @@ export default function Bac() {
                 },
                 {
                     name: "Sujet du stage",
-                    image: "/reunimer/bateau.webp",
+                    image: bateau,
                     description:
                         <div className="flex flex-col text-justify gap-4 ml-10">
                             <h2><strong><a href="#"> Intitulé stage </a></strong> : Développement d’un module de gestion de référentiels et migration de données Access vers PostgreSQL</h2>
@@ -112,7 +116,7 @@ export default function Bac() {
                 },
                 {
                     name: "Compétences techniques",
-                    image: "/reunimer/stack-traiteur.png",
+                    image: stackTraiteur,
                     description:
                         <div className="ml-10 flex flex-col gap-8">
                             <p>Ce stage m'a permis de consolider mes compétences en analyse et en architecture logicielle en intervenant sur l'ensemble d'une stack technique moderne. J'ai notamment exploité les technologies suivantes :</p>
@@ -129,7 +133,6 @@ export default function Bac() {
                 },
                 {
                     name: "Retrospective",
-                    image: "",
                     description:
                         <div className="flex flex-row gap-32 mr-10 p-16 items-start w-full">
                             <div className="flex flex-col flex-1 gap-16">
@@ -157,7 +160,7 @@ export default function Bac() {
                 },
                 {
                     name: "Etablissement",
-                    image: "/reunimer/atlas_cove.jpg",
+                    image: atlasCove,
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4 ml-10">
                             <button

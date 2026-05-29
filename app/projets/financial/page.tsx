@@ -1,6 +1,21 @@
-import ProjectList from "@/src/components/Project/ProjectList";
+import ProjectList, {ProjectListProps} from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
 import ProjectBar from "@/src/components/Project/ProjectBar";
+import {StaticImageData} from "next/image";
+
+// 1. Importation statique de toutes les images
+import topbarImg from "@/public/financial/topbar.png";
+import sidebarImg from "@/public/financial/sidebar.png";
+import mainImg from "@/public/financial/main.png";
+import overviewImg from "@/public/financial/overview.png";
+import recapImg from "@/public/financial/recap.png";
+import employeesImg from "@/public/financial/employees.png";
+import infraImg from "@/public/financial/infra.png";
+import productionImg from "@/public/financial/production.png";
+import shipmentImg from "@/public/financial/shipment.png";
+import adsImg from "@/public/financial/ads.png";
+import rdrseImg from "@/public/financial/rdrse.png";
+import githubLogo from "@/public/logo/github.svg";
 
 export default function Bac() {
     const description = (
@@ -40,21 +55,21 @@ export default function Bac() {
                 {
                     title: "La barre supérieure",
                     content: "Affiche différentes informations globales (nom de l'entreprise, date actuelle du tour) et possède différents boutons d'action rapide comme le passage au tour suivant, l'aide et le centre de notifications.",
-                    image: "/financial/topbar.png",
+                    image: topbarImg, // Remplacement ici
                     alt: "Capture d'écran de la barre supérieure",
                     id:"topbar-1"
                 },
                 {
                     title: "Le menu de navigation",
                     content: "Affiche le titre et possède tous les éléments de navigation latérale vers les autres onglets. Il intègre également le mini-profil du joueur avec son avatar, le nom de l'entreprise et un lien vers le profil complet.",
-                    image: "/financial/sidebar.png",
+                    image: sidebarImg, // Remplacement ici
                     alt: "Capture d'écran de la barre de navigation latérale",
                     id: "sidebar-1"
                 },
                 {
                     title: "Le contenu principal",
                     content: "Contient l'entièreté du contenu dynamique de l'onglet sélectionné. Alors que l'enveloppe globale reste fixe, cette zone se recharge pour afficher le domaine de gestion demandé.",
-                    image: "/financial/main.png",
+                    image: mainImg, // Remplacement ici
                     alt: "Capture d'écran du contenu principal",
                     id: "main-1"
                 }
@@ -66,56 +81,56 @@ export default function Bac() {
                 {
                     title: "Supervision & Tableau de bord",
                     content: "L'écran principal du jeu. Il sert de tableau de bord analytique afin de surveiller la santé financière globale (liquidités, CA brut/net), les cours de la bourse, les graphiques d'offre/demande et les événements aléatoires à venir.",
-                    image: "/financial/overview.png",
+                    image: overviewImg,
                     alt: "Capture d'écran de l'onglet de supervision",
                     id:"overview-1"
                 },
                 {
                     title: "Le récapitulatif financier",
                     content: "Rassemble toutes les informations comptables de l'entreprise. Il sépare les données d'affichage non modifiables des historiques de transactions en temps réel et propose un panneau de décisions condensé pour les choix rapides.",
-                    image: "/financial/recap.png",
+                    image: recapImg, // Remplacement ici
                     alt: "Capture d'écran de l'onglet récapitulatif financier",
                     id: "recap-1"
                 },
                 {
                     title: "Gestion des Ressources Humaines",
                     content: "Permet de piloter la masse salariale de l'entreprise : embauches, licenciements, gestion des salaires, suivi de la motivation des employés et de la productivité globale des équipes.",
-                    image: "/financial/employees.png",
+                    image: employeesImg, // Remplacement ici
                     alt: "Capture d'écran de la gestion des employés",
                     id: "employees-1"
                 },
                 {
                     title: "Infrastructures & Logistique",
                     content: "Contrôle les actifs physiques et les usines de l'entreprise. Permet d'investir dans l'agrandissement des locaux, l'achat de machines plus performantes ou l'entretien des bâtiments de stockage.",
-                    image: "/financial/infra.png",
+                    image: infraImg, // Remplacement ici
                     alt: "Capture d'écran de la gestion des infrastructures",
                     id: "infra-1"
                 },
                 {
                     title: "Chaîne de Production",
                     content: "Gère la transformation des matières premières en produits finis. Le joueur y ajuste les volumes de fabrication en fonction des capacités des machines et de la main-d'œuvre disponible.",
-                    image: "/financial/production.png",
+                    image: productionImg, // Remplacement ici
                     alt: "Capture d'écran de l'onglet de production",
                     id: "production-1"
                 },
                 {
                     title: "Logistique & Expéditions (Shipment)",
                     content: "Pilote les flux d'import et d'export. Permet de planifier les livraisons, de choisir les transporteurs, de gérer les contrats de distribution et de suivre l'état des stocks de produits finis prêts à être expédiés.",
-                    image: "/financial/shipment.png",
+                    image: shipmentImg, // Remplacement ici
                     alt: "Capture d'écran de la gestion des expéditions",
                     id: "shipment-1"
                 },
                 {
                     title: "Marketing & Publicité (Ads)",
                     content: "Permet de concevoir les campagnes publicitaires afin de doper la notoriété de la marque, d'attirer de nouveaux clients et de stimuler activement la demande sur le marché.",
-                    image: "/financial/ads.png",
+                    image: adsImg, // Remplacement ici
                     alt: "Capture d'écran du panneau marketing et publicité",
                     id: "ads-1"
                 },
                 {
                     title: "R&D et Stratégie (RDRSE)",
                     content: "L'onglet de Recherche & Développement et de Responsabilité Sociétale des Entreprises. Permet de financer des innovations technologiques pour améliorer les produits et d'adopter des politiques éco-responsables.",
-                    image: "/financial/rdrse.png",
+                    image: rdrseImg, // Remplacement ici
                     alt: "Capture d'écran de l'onglet R&D et RSE",
                     id: "rdrse-1"
                 }
@@ -163,23 +178,23 @@ export default function Bac() {
         ]
     ];
 
-    const screenshots = [
-        ["/financial/main.png", "Vue globale de l'application", "screenshot-main"],
-        ["/financial/overview.png", "Tableau de bord de supervision", "screenshot-overview"],
-        ["/financial/recap.png", "Récapitulatif comptable et financier", "screenshot-recap"],
-        ["/financial/employees.png", "Gestion de la masse salariale", "screenshot-employees"],
-        ["/financial/infra.png", "Gestion des usines et infrastructures", "screenshot-infra"],
-        ["/financial/production.png", "Suivi de la chaîne de fabrication", "screenshot-production"],
-        ["/financial/shipment.png", "Interface d'import/export et expéditions", "screenshot-shipment"],
-        ["/financial/ads.png", "Campagnes de publicité et marketing", "screenshot-ads"],
-        ["/financial/rdrse.png", "Recherche & Développement et RSE", "screenshot-rdrse"]
+    const screenshots: [StaticImageData, string, string][] = [
+        [mainImg, "Vue globale de l'application", "screenshot-main"],
+        [overviewImg, "Tableau de bord de supervision", "screenshot-overview"],
+        [recapImg, "Récapitulatif comptable et financier", "screenshot-recap"],
+        [employeesImg, "Gestion de la masse salariale", "screenshot-employees"],
+        [infraImg, "Gestion des usines et infrastructures", "screenshot-infra"],
+        [productionImg, "Suivi de la chaîne de fabrication", "screenshot-production"],
+        [shipmentImg, "Interface d'import/export et expéditions", "screenshot-shipment"],
+        [adsImg, "Campagnes de publicité et marketing", "screenshot-ads"],
+        [rdrseImg, "Recherche & Développement et RSE", "screenshot-rdrse"]
     ];
 
-        const links = [
-            ["https://github.com/p0lpol/eco", "/logo/github.svg"]
-        ];
+    const links: [string, StaticImageData][] = [
+        ["https://github.com/p0lpol/eco", githubLogo]
+    ];
 
-    const projectData = {
+    const projectData: ProjectListProps = {
         description: description,
         dates: dates,
         cadre: cadre,

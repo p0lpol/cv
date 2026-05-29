@@ -2,12 +2,16 @@
 
 import YearlySection from "@/src/components/YearlySection";
 import {BigItemsProps} from "@/src/components/BigItemLink";
+import financial from '@/public/financial.png'
+import labyrinthe from '@/public/labyrinthe.png'
+import superCalculator from '@/public/SuperCalculator.png'
+import medievalHorizon from '@/public/medieval_horizon.png'
 
 export default function Page() {
 
     const Financials: BigItemsProps = {
             name: "Financial",
-            image: "/financial.png",
+            image: financial,
             description: <>
                 <h1 className="uppercase text-xl font-bold">En cours</h1>
                 <p>
@@ -19,21 +23,21 @@ export default function Page() {
 
     const Labyrinthe = {
         name: "Labyrinthe",
-        image: "/labyrinthe.png",
+        image: labyrinthe,
         description: <p>Jeu de labyrinthe avec génération...</p>,
         link: "/projets/labyrinthe"
     }
 
     const Calculatrice = {
         name: "Calculatrice",
-        image: "/SuperCalculator.png",
+        image: superCalculator,
         description: <p>Calculatrice avec opérations...</p>,
         link: "/projets/super-calculator",
     }
 
     const MedievalHorizon = {
         name: "Medieval Horizon",
-        image: "/medieval_horizon.png",
+        image: medievalHorizon,
         description: <p>Jeu de construction de ville...</p>,
         link: "/projets/medieval-horizon"
     }

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import {ReactNode} from "react";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 export interface BigItemsProps {
     name: string;
-    image: string;
+    image?: StaticImageData;
     description: string | ReactNode;
     link: string;
     fullSize?: boolean;
@@ -39,6 +39,7 @@ export default function BigItemLink({
                 </div>
             </div>
 
+            {image &&
             <Image
                 src={image}
                 alt={name}
@@ -56,6 +57,7 @@ export default function BigItemLink({
                     hidden 2xl:block
                 `}
             />
+            }
         </Link>
     )
 }

@@ -1,4 +1,6 @@
 import BigList from "@/src/components/BigList";
+import uLilleIut from '@/public/ULille-IUT.svg'
+import jjLogoFinal from '@/public/JJ_logo_final.jpeg'
 
 export default function Page() {
     return (
@@ -8,7 +10,7 @@ export default function Page() {
                 <BigList items={[
                     {
                         name: "BUT Informatique - IUT de Lille",
-                        image: "/ULille-IUT.svg",
+                        image: uLilleIut,
                         description: <>
                             <h1 className="text-xl font-bold text-emerald-200">Formation Actuelle</h1>
                             <p>
@@ -22,7 +24,7 @@ export default function Page() {
                     },
                     {
                         name: "Baccalaureat - Lycée Jean Joly",
-                        image: "/JJ_logo_final.jpeg",
+                        image: jjLogoFinal,
                         description: <>
                             <h1></h1>
                             <p>

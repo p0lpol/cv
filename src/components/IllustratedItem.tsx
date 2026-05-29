@@ -1,10 +1,11 @@
 import GrowableImage from "@/src/components/GrowableImage";
 import {ReactNode} from "react";
+import {StaticImageData} from "next/image";
 
 export interface IllustratedItemProps {
     title: string;
     content: string | ReactNode;
-    image: string;
+    image: StaticImageData;
     alt: string;
     id: string;
 }

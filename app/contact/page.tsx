@@ -2,6 +2,7 @@
 import {Mail} from "lucide-react";
 import {useState} from "react";
 import Image from "next/image";
+import linkedin from '@/public/LinkedIn.svg'
 
 export function useCopy() {
     const [isCopied, setIsCopied] = useState(false);
@@ -28,7 +29,7 @@ export default function Page() {
     const LinkedIn = (
         {size}: {size: number}) =>
         <Image
-            src="/LinkedIn.svg"
+            src={linkedin}
             alt="LinkedIn"
             width={size}
             height={size}

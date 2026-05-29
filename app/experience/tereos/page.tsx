@@ -1,6 +1,8 @@
 "use client"
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from "usehooks-ts";
+import usineDuGol from '@/public/usine-du-gol.jpg';
+import laSucrerieDuGol from '@/public/la-sucrerie-du-gol.jpg';
 
 export default function Bac() {
     const [_value, copy] = useCopyToClipboard()
@@ -11,7 +13,7 @@ export default function Bac() {
             <BigList items={[
                 {
                     name: "Détails du stage",
-                    image: "/la-sucrerie-du-gol.jpg",
+                    image: laSucrerieDuGol,
                     description:
                         <div className="flex flex-col justify-evenly items-center h-60">
                             <ul className="flex flex-col items-baseline ml-20 gap-4">
@@ -34,7 +36,7 @@ export default function Bac() {
                 },
                 {
                     name: "Etablissement",
-                    image: "/usine-du-gol.jpg",
+                    image: usineDuGol,
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button

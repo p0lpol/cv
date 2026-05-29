@@ -1,11 +1,13 @@
 import BigList from "@/src/components/BigList";
 import Collection from "@/src/components/Collection";
+import sourceCode from '@/public/source_code.jpg'
+import handShake from '@/public/handshake.jpg'
 
 export default function Competences() {
 
     const hardSkillCard = {
         name: "Hard Skills",
-        image: "/source_code.jpg",
+        image: sourceCode,
         description:
         <ul className="list-disc flex flex-col flex-1 justify-evenly pl-12">
             <li>Analyse des besoins et modélisation</li>
@@ -22,7 +24,7 @@ export default function Competences() {
 
     const softSkillCard = {
         name: "Soft Skills",
-        image: "/handshake.jpg",
+        image: handShake,
         description:
             <ul className="list-disc list-outside flex flex-col flex-1 justify-evenly text-gray-200 pl-12">
                 <li> <strong>Communication technique :</strong> Anglais professionnel et capacité de synthèse. </li>

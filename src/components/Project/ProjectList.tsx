@@ -6,8 +6,9 @@ import ProjectDifficulties from "@/src/components/Project/ProjectDifficulties";
 import ProjectScreenshots from "@/src/components/Project/ProjectScreenshots";
 import ProjectLinks from "@/src/components/Project/ProjectLinks";
 import ProjectRole from "@/src/components/Project/ProjectRole";
+import {StaticImageData} from "next/image";
 
-interface ProjectListProps {
+export interface ProjectListProps {
     description: ReactNode;
     dates: ReactNode;
     cadre: ReactNode;
@@ -15,8 +16,8 @@ interface ProjectListProps {
     bonus?: ReactNode;
     role?: ReactNode;
     difficulties: string[][];
-    screenshots: string[][];
-    links: string[][];
+    screenshots: [StaticImageData, string, string][];
+    links: [string, StaticImageData][];
 }
 
 export default function ProjectList({description, dates, cadre, expectations, bonus, role, difficulties, screenshots, links}: ProjectListProps) {

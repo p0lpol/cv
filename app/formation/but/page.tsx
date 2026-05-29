@@ -2,6 +2,9 @@
 
 import BigList from "@/src/components/BigList";
 import {useCopyToClipboard} from 'usehooks-ts'
+import sourceCode from '@/public/source_code.jpg'
+import iutHall from '@/public/iut_hall.jpg'
+import iut from '@/public/iut.jpg.jpg'
 
 export default function But() {
     const [value, copy] = useCopyToClipboard()
@@ -12,7 +15,7 @@ export default function But() {
             <BigList items={[
                 {
                     name: "BUT Informatique 2024-2027",
-                    image: "/source_code.jpg",
+                    image: sourceCode,
                     description:
                         <div className="flex flex-col justify-evenly items-center h-70">
                             <p className="text-2xl">Compétences clés</p>
@@ -30,7 +33,7 @@ export default function But() {
                 },
                 {
                     name: "Unités d'enseignement",
-                    image: "/iut_hall.jpg",
+                    image: iutHall,
                     description:
                         <div className="flex flex-col justify-evenly items-center h-70">
                             <ul className="list-none flex flex-col flex-1 justify-evenly w-2/3 text-lg">
@@ -47,7 +50,7 @@ export default function But() {
                 },
                 {
                     name: "Etablissement",
-                    image: "/iut.jpg",
+                    image: iut,
                     description:
                         <div className="flex flex-col justify-evenly h-70 gap-4">
                             <button onClick={() => copy("IUT de Lille Av. Paul Langevin, 59653 Villeneuve-d'Ascq")}

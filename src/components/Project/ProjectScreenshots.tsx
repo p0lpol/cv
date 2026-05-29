@@ -1,6 +1,7 @@
 import FormattedScreenshot from "@/src/components/FormattedScreenshot";
+import {StaticImageData} from "next/image";
 
-export default function ProjectScreenshots({screenshots}: {screenshots: string[][]}) {
+export default function ProjectScreenshots({screenshots}: {screenshots: [StaticImageData, string, string][]}) {
     return (
         <div id="screenshots" className="section">
             <h1 className="section-title">Captures d'écran du projet</h1>

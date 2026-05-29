@@ -1,6 +1,21 @@
 import ProjectList from "@/src/components/Project/ProjectList";
 import IllustratedList from "@/src/components/IllustratedList";
 import ProjectBar from "@/src/components/Project/ProjectBar";
+import {StaticImageData} from "next/image"; // Importation du type pour les tableaux
+// 1. Importation statique de toutes les images
+import freeModeImg from "@/public/maze/freeMode.png";
+import stepsImg from "@/public/maze/steps.png";
+import totalImg from "@/public/maze/total.png";
+import localImg from "@/public/maze/local.png";
+import limitedImg from "@/public/maze/limited.png";
+import mappedImg from "@/public/maze/mapped.png";
+import step1Img from "@/public/maze/steps/1.png"; // Utilisée pour les 6 étapes dans ton code
+import titleImg from "@/public/maze/title.png";
+import loginImg from "@/public/maze/login.png";
+import mainMenuImg from "@/public/maze/mainMenu.png";
+import mazeImg from "@/public/maze/maze.png";
+import profileImg from "@/public/maze/profile.png";
+import gitlabLogo from "@/public/logo/gitlab.svg";
 
 export default function Labyrinthe() {
     const description = (
@@ -12,7 +27,7 @@ export default function Labyrinthe() {
             Progression. Ce projet a été réalisé par équipe de cinq personnes en utilisant Java pour le
             back-end et JavaFX pour le front-end. Deux rendus ont été effectués :
             un premier prototype avec des fonctionnalités de base, puis une version finale avec toutes
-            les <a>fonctionnalités attendues</a> et des <a>ajouts optionnels</a>.
+            les <a href="#expectations">fonctionnalités attendues</a> et des <a href="#bonus">ajouts optionnels</a>.
         </p>
     );
 
@@ -49,14 +64,14 @@ export default function Labyrinthe() {
                     {
                         title: "Mode Libre",
                         content: "Choix des différents paramètres du labyrinthe (taille, pourcentage de mure, type, vue, etc.)",
-                        image: "/maze/freeMode.png",
+                        image: freeModeImg,
                         alt: "Capture d'écran de la fenêtre de configuration du mode libre",
                         id:"free-1"
                     },
                     {
                         title: "Mode Progression",
                         content: "étapes pré-faites et imposées. Une étape est un niveau, dont la difficulté peut impacter différents facteur (pourcentage de murs, paramètres propres à la vue, etc.)",
-                        image: "/maze/steps.png",
+                        image: stepsImg,
                         alt: "Capture d'écran de la fenêtre de selection de la difficulté de l'étape",
                         id: "prog-1"
                     }
@@ -70,28 +85,28 @@ export default function Labyrinthe() {
                     {
                         title: "Vue Totale",
                         content: "le labyrinthe ainsi que tous les éléments (joueur, sortie) sont entièrement visibles.",
-                        image: "/maze/total.png",
+                        image: totalImg,
                         alt: "Capture d'écran du labyrinthe en vue totale",
                         id: "total-1"
                     },
                     {
                         title: "Vue Locale",
                         content: "le joueur est affiché sur une vue annexe où le champ de vision est réduit à une case. Le reste des éléments du labyrinthes sont affichés normalement",
-                        image: "/maze/local.png",
+                        image: localImg,
                         alt: "Capture d'écran du labyrinthe en vue locale",
                         id: "locale-1"
                     },
                     {
                         title: "Vue Limitée",
                         content: "le joueur ne voit que les cases se trouvant à une certaine distance de lui. Il ne peut pas voir à travers les murs. La distance d'affichage est configurable",
-                        image: "/maze/limited.png",
+                        image: limitedImg,
                         alt: "Capture d'écran du labyrinthe en vue limitée",
                         id: "limitee-1"
                     },
                     {
                         title: "Vue Mappée",
                         content: "L'affichage principal révèle petit à petit les éléments qui ont été vus dans une vue locale centrée sur le joueur. La taille de cette vue locale est configurable.",
-                        image: "/maze/mapped.png",
+                        image: mappedImg,
                         alt: "Capture d'écran du labyrinthe en vue mappée",
                         id: "mapped-1"
                     }
@@ -104,42 +119,42 @@ export default function Labyrinthe() {
                     {
                         title: "Etape 1",
                         content: "un labyrinthe aléatoire non carré de petite dimension.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la première étape",
                         id: "e1-1"
                     },
                     {
                         title: "Etape 2",
                         content: "un labyrinthe aléatoire de taille plus grande.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la deuxième étape",
                         id: "e2-1"
                     },
                     {
                         title: "Etape 3",
                         content: "un labyrinthe aléatoire avec une vue locale.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la troisième étape",
                         id: "e3-1"
                     },
                     {
                         title: "Etape 4",
                         content: "un labyrinthe parfait de très petite taille.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la quatrième étape",
                         id: "e4-1"
                     },
                     {
                         title: "Etape 5",
                         content: "un labyrinthe aléatoire en vue limitée.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la cinquième étape",
                         id: "e5-1"
                     },
                     {
                         title: "Etape 6",
                         content: "un labyrinthe aléatoire en vue mappée.",
-                        image: "/maze/steps/1.png",
+                        image: step1Img,
                         alt: "illustration de la sixième étape",
                         id: "e6-1"
                     }
@@ -182,27 +197,27 @@ export default function Labyrinthe() {
     const role = (
         <div className="text-white w-9/10 self-center text-justify">
             <p>Durant ce projet, nous ne nous sommes pas répartis des tâches précises et des rôles à chacun pour éviter de trop
-            grandes disparités dans les compétences demandées. Ainsi, j'ai participé à la mise en place de plusieurs aspects du projet, tels que : </p>
+                grandes disparités dans les compétences demandées. Ainsi, j'ai participé à la mise en place de plusieurs aspects du projet, tels que : </p>
             <ul className="list-disc ml-8 mt-2 gap-2 flex flex-col">
                 <li><strong><a href="#role"> L'interface utilisateur :</a></strong> j'ai conçu une partie des écrans de l'application, et j'ai retouché les écrans qui n'étaient pas conforme
-                en terme de structure. En effet, certains écrans avaient été fait avec un positionnement flottant des éléments au lieu de les contraindre.</li>
+                    en terme de structure. En effet, certains écrans avaient été fait avec un positionnement flottant des éléments au lieu de les contraindre.</li>
                 <li><strong><a href="#role">L'algorithmie :</a></strong> je me suis occupé de mettre en place un algorithme de détection de murs et de calcul du champs de vision du joueur dans
-                la vue limitée. C'est l'un des algorithmes les plus complexes du projet.</li>
+                    la vue limitée. C'est l'un des algorithmes les plus complexes du projet.</li>
                 <li><strong><a href="#role">L'architecture :</a></strong> j'ai consacré une partie importante de mon temps sur le projet à refactoriser et réorganiser le code afin de respecter
                     les principes
                     <strong><a href="#role"> SOLID</a></strong>,
                     <strong><a href="#role"> DRY </a></strong>
                     et le modèle <strong><a href="#role">MVC</a></strong>.</li>
                 <li><strong><a href="#role">L'équilibrage :</a></strong> la gestion de la difficulté était un point volontairement différé car non prioritaire face à l'ajout de fonctionnalités,
-                je m'y suis malgré tout impliqué afin d'avoir un jeu non seulement jouable, mais agréable et équilibré afin de limiter la frustration du joueur</li>
+                    je m'y suis malgré tout impliqué afin d'avoir un jeu non seulement jouable, mais agréable et équilibré afin de limiter la frustration du joueur</li>
                 <li><strong><a href="#role">L'optimisation :</a></strong> l'UI en
                     <strong><a href="#role"> JavaFX </a></strong>
                     était très limité en terme de performances et pas du tout adapté à notre utilisation qui demandait l'affichage
-                de centaines d'éléments indépendants à chaque mise à jour. Afin d'améliorer les performances et de permettre au jeu d'afficher des labyrinthes plus
-                grands et plus complexes, j'ai passé un certain temps sur l'optimisation de l'affichage et des calculs de mise à jour.</li>
+                    de centaines d'éléments indépendants à chaque mise à jour. Afin d'améliorer les performances et de permettre au jeu d'afficher des labyrinthes plus
+                    grands et plus complexes, j'ai passé un certain temps sur l'optimisation de l'affichage et des calculs de mise à jour.</li>
                 <li><strong><a href="#role">Le modèle MVC :</a></strong> je me suis occupé de la mise en place du modèle MVC en reliant le modèle et la vue avec un controleur minimal et découplé.
-                Nous étions initialement parti sur une mauvaise implémentation du modèle par manque de compréhension des concepts fondamentaux du MVC. Il a fallu presque
-                tout refaire afin d'éviter d'avoir trop de dette technique à la fin du projet.</li>
+                    Nous étions initialement parti sur une mauvaise implémentation du modèle par manque de compréhension des concepts fondamentaux du MVC. Il a fallu presque
+                    tout refaire afin d'éviter d'avoir trop de dette technique à la fin du projet.</li>
                 <li><strong><a href="#role">La musique :</a></strong> j'ai créé les bruitages et composé les deux musiques du jeu.</li>
             </ul>
         </div>
@@ -241,17 +256,21 @@ export default function Labyrinthe() {
             "Les performances de l'affichage du labyrinthe se sont nettement améliorées, offrant une expérience utilisateur plus fluide. Le temps de réponse aux déplacements a été réduit et la taille maximale des labyrinthes a pu être augmentée."
         ]
     ];
-    const screenshots = [
-        ["/maze/title.png", "Ecran titre", "title-1"],
-        ["/maze/freeMode.png", "Mode Libre", "free-2"],
-        ["/maze/login.png", "Ecran de connexion", "login-1"],
-        ["/maze/mainMenu.png", "Menu principal", "mainMenu-1"],
-        ["/maze/maze.png", "Labyrinthe", "maze-1"],
-        ["/maze/profile.png", "Profil", "profile-1"],
-            ["/maze/steps.png", "Etapes", "steps-1"],
+
+    // 2. Déclaration explicite du Tuple pour éviter les erreurs TypeScript
+    const screenshots: [StaticImageData, string, string][] = [
+        [titleImg, "Ecran titre", "title-1"],
+        [freeModeImg, "Mode Libre", "free-2"],
+        [loginImg, "Ecran de connexion", "login-1"],
+        [mainMenuImg, "Menu principal", "mainMenu-1"],
+        [mazeImg, "Labyrinthe", "maze-1"],
+        [profileImg, "Profil", "profile-1"],
+        [stepsImg, "Etapes", "steps-1"],
     ];
-    const links = [
-        ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", "/logo/gitlab.svg"]
+
+    // 2. Déclaration explicite du Tuple
+    const links: [string, StaticImageData][] = [
+        ["https://gitlab.univ-lille.fr/sae302/2025/H5_SAE3.3", gitlabLogo]
     ];
 
     const projectData = {
@@ -273,10 +292,10 @@ export default function Labyrinthe() {
 
             <div className="flex flex-1 w-full h-full items-start">
                 <ProjectBar bonus={true} role={true}/>
-                    <div className="flex flex-col flex-1 w-3/4 pl-8">
-                        <ProjectList {...projectData} />
-                    </div>
+                <div className="flex flex-col flex-1 w-3/4 pl-8">
+                    <ProjectList {...projectData} />
                 </div>
+            </div>
         </div>
     );
 }

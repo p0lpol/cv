@@ -1,8 +1,9 @@
 "use client"
 import {useState} from "react";
-import ThreeDImage from "./ThreeDImage"; // Ajuste le chemin si nécessaire
+import ThreeDImage from "./ThreeDImage";
+import {StaticImageData} from "next/image"; // Ajuste le chemin si nécessaire
 
-export default function ImageLink({ link, image }: { link: string, image: string }) {
+export default function ImageLink({ link, image }: { link: string, image: StaticImageData }) {
     const [isPressed, setIsPressed] = useState(false);
 
     return (
@@ -18,7 +19,7 @@ export default function ImageLink({ link, image }: { link: string, image: string
             onMouseLeave={() => setIsPressed(false)}
         >
             <ThreeDImage
-                src={image}
+                src={image.src}
                 alt="screenshot du projet"
                 sensitivity={4}
                 className="w-full h-full"

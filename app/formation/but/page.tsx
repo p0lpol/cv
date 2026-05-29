@@ -26,7 +26,6 @@ export default function But() {
                             </ul>
                         </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 },
                 {
@@ -44,7 +43,6 @@ export default function But() {
                             </ul>
                         </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 },
                 {
@@ -64,7 +62,6 @@ export default function But() {
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>,
                     link: "#",
-                    rounded: false,
                     size: 96
                 }
             ]}/>

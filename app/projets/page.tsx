@@ -29,7 +29,6 @@ export default function Page() {
         image: "/SuperCalculator.png",
         description: <p>Calculatrice avec opérations...</p>,
         link: "/projets/super-calculator",
-        rounded: false
     }
 
     const MedievalHorizon = {
